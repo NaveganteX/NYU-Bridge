@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="hw2_2" targetName="hw2_2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b1a6f2e-7d99-4c1b-8f71-1772b0d4b452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../hw2_q1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2_q1/lh3024_hw2_q1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q1/hw2_q1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lh3024_hw2_q2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hw2_q2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2_q3/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q3/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2_q3/lh3024_hw2_q3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q3/hw2_q3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2_q4/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q4/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2_q4/lh3024_hw2_q4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2_q4/hw2_q4.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WfhJgsoe52kkuAA2Xv8C6gJ1Yi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="hw2_2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hw2_2" TARGET_NAME="hw2_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hw2_2" RUN_TARGET_NAME="hw2_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b1a6f2e-7d99-4c1b-8f71-1772b0d4b452" name="Default Changelist" comment="" />
+      <created>1579546485094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579546485094</updated>
+      <workItem from="1579546486446" duration="7085000" />
+      <workItem from="1579558590193" duration="930000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1878" height="230" key="GridCell.Tab.0.bottom" timestamp="1579558514563">
+      <screen x="-1920" y="-124" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-124.1920.1057@-1920.-124.1920.1057" timestamp="1579558514563" />
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1579557621005" />
+    <state width="1878" height="230" key="GridCell.Tab.0.center" timestamp="1579558514562">
+      <screen x="-1920" y="-124" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="230" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-124.1920.1057@-1920.-124.1920.1057" timestamp="1579558514562" />
+    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1579557621004" />
+    <state width="1878" height="230" key="GridCell.Tab.0.left" timestamp="1579558514562">
+      <screen x="-1920" y="-124" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="230" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-124.1920.1057@-1920.-124.1920.1057" timestamp="1579558514562" />
+    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1579557621004" />
+    <state width="1878" height="230" key="GridCell.Tab.0.right" timestamp="1579558514563">
+      <screen x="-1920" y="-124" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="230" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-124.1920.1057@-1920.-124.1920.1057" timestamp="1579558514563" />
+    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1579557621005" />
+    <state width="1398" height="726" key="GridCell.Tab.1.bottom" timestamp="1579556133462">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1579556133462" />
+    <state width="1398" height="726" key="GridCell.Tab.1.center" timestamp="1579556133461">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1579556133461" />
+    <state width="1398" height="726" key="GridCell.Tab.1.left" timestamp="1579556133461">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1579556133461" />
+    <state width="1398" height="726" key="GridCell.Tab.1.right" timestamp="1579556133462">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1579556133462" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1579556144796">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1579556144796" />
+  </component>
+</project>
