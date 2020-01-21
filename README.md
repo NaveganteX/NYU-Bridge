@@ -1,3 +1,1 @@
-# NYUBridge
-# NYU-Bridge
-# NYU-Bridge
+# NYU Bridge
