@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main() {
     int quarters;
@@ -9,29 +10,29 @@ int main() {
     int cents;
     int total;
 
-    std::cout << "Please enter number of coins" << std::endl;
+    cout<<"Please enter number of coins"<<endl;
 
-    std::cout << "# of quarters: " << std::endl;
-    std::cin >> quarters;
+    cout<<"# of quarters: "<<endl;
+    cin>>quarters;
     quarters *= 25;
 
-    std::cout << "# of dimes:" << std::endl;
-    std::cin >> dimes;
+    cout<<"# of dimes:"<<endl;
+    cin>>dimes;
     dimes *= 10;
 
-    std::cout << "# of nickels:" << std::endl;
-    std::cin >> nickels;
+    cout<<"# of nickels:"<<endl;
+    cin>>nickels;
     nickels *= 5;
 
-    std::cout << "# of pennies:" << std::endl;
-    std::cin >> pennies;
+    cout<<"# of pennies:"<<endl;
+    cin>>pennies;
 
     total = quarters + dimes + nickels + pennies;
 
     dollars = total / 100;
     cents = total % 100;
 
-    std::cout << "The total is " << dollars << " dollars and " << cents << " cents" << std::endl;
+    cout<<"The total is "<<dollars<<" dollars and "<<cents<<" cents"<<endl;
 
     return 0;
 }

@@ -3,4 +3,4 @@ project(hw2_q1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hw2_q1 hw2_q1.cpp)
+add_executable(hw2_q1 lh3024_hw2_q1.cpp)

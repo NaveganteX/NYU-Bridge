@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
-project(hw2_q3)
+project(hw3_q2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hw2_q3 lh3024_hw2_q3.cpp)
+add_executable(hw3_q2 hw3_q2.cpp)
