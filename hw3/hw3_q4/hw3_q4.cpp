@@ -19,19 +19,27 @@ int main() {
 
     switch (method) {
         case FLOOR_ROUND:
+            if (num < 0) {
+                num -= 1;
+            }
             cout << (int)num;
             break;
         case CEILING_ROUND:
-            num +=1;
+            if (num > 0) {
+                num += 1;
+            }
             cout << (int)num;
             break;
         case ROUND:
-            num += 0.5;
+            if (num > 0) {
+                num += 0.5;
+            } else {
+                num -= 0.5;
+            }
             cout << (int)num;
             break;
         default:
             break;
     }
-    
     return 0;
 }
