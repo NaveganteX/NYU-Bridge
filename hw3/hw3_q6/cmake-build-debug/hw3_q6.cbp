@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/main.cpp">
+		<Unit filename="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/hw3_q6.cpp">
 			<Option target="hw3_q6"/>
 		</Unit>
 		<Unit filename="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/CMakeLists.txt">

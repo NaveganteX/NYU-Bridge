@@ -57,27 +57,27 @@ include CMakeFiles/hw3_q6.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hw3_q6.dir/flags.make
 
-CMakeFiles/hw3_q6.dir/main.cpp.o: CMakeFiles/hw3_q6.dir/flags.make
-CMakeFiles/hw3_q6.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw3_q6.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw3_q6.dir/main.cpp.o -c "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/main.cpp"
+CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o: CMakeFiles/hw3_q6.dir/flags.make
+CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o: ../hw3_q6.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o -c "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/hw3_q6.cpp"
 
-CMakeFiles/hw3_q6.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw3_q6.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/main.cpp" > CMakeFiles/hw3_q6.dir/main.cpp.i
+CMakeFiles/hw3_q6.dir/hw3_q6.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw3_q6.dir/hw3_q6.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/hw3_q6.cpp" > CMakeFiles/hw3_q6.dir/hw3_q6.cpp.i
 
-CMakeFiles/hw3_q6.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw3_q6.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/main.cpp" -o CMakeFiles/hw3_q6.dir/main.cpp.s
+CMakeFiles/hw3_q6.dir/hw3_q6.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw3_q6.dir/hw3_q6.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/hw3_q6.cpp" -o CMakeFiles/hw3_q6.dir/hw3_q6.cpp.s
 
 # Object files for target hw3_q6
 hw3_q6_OBJECTS = \
-"CMakeFiles/hw3_q6.dir/main.cpp.o"
+"CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o"
 
 # External object files for target hw3_q6
 hw3_q6_EXTERNAL_OBJECTS =
 
-hw3_q6: CMakeFiles/hw3_q6.dir/main.cpp.o
+hw3_q6: CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o
 hw3_q6: CMakeFiles/hw3_q6.dir/build.make
 hw3_q6: CMakeFiles/hw3_q6.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/lhon001/Development/NYU Bridge/hw3/hw3_q6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hw3_q6"

@@ -123,32 +123,32 @@ hw3_q6/fast:
 	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/build
 .PHONY : hw3_q6/fast
 
-main.o: main.cpp.o
+hw3_q6.o: hw3_q6.cpp.o
 
-.PHONY : main.o
+.PHONY : hw3_q6.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/main.cpp.o
-.PHONY : main.cpp.o
+hw3_q6.cpp.o:
+	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/hw3_q6.cpp.o
+.PHONY : hw3_q6.cpp.o
 
-main.i: main.cpp.i
+hw3_q6.i: hw3_q6.cpp.i
 
-.PHONY : main.i
+.PHONY : hw3_q6.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/main.cpp.i
-.PHONY : main.cpp.i
+hw3_q6.cpp.i:
+	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/hw3_q6.cpp.i
+.PHONY : hw3_q6.cpp.i
 
-main.s: main.cpp.s
+hw3_q6.s: hw3_q6.cpp.s
 
-.PHONY : main.s
+.PHONY : hw3_q6.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/main.cpp.s
-.PHONY : main.cpp.s
+hw3_q6.cpp.s:
+	$(MAKE) -f CMakeFiles/hw3_q6.dir/build.make CMakeFiles/hw3_q6.dir/hw3_q6.cpp.s
+.PHONY : hw3_q6.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hw3_q6"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... hw3_q6.o"
+	@echo "... hw3_q6.i"
+	@echo "... hw3_q6.s"
 .PHONY : help
 
 
