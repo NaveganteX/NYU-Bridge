@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     int duration, hour, minutes;
-    double rate=0, cost;
+    double rate, cost;
     string day;
     char colon;
 
@@ -17,11 +17,8 @@ int main() {
     cout << "How long was your call (in minutes)? " << endl;
     cin >> duration;
 
-//  weekday
     if ((day != "Sa") && (day != "Su")) {
-//        in between 8am and 6pm
         if ((hour >= 8) && (hour <= 18)) {
-//            if 6th hr check not past 6pm
             if ((hour == 18) && (minutes > 0)) {
                 rate = .25;
             } else {
