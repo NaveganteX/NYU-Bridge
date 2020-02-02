@@ -10,54 +10,34 @@ int main() {
     cin >> input;
 
     number = input;
-    if (number > 999) {
-        m = number / 1000;
-        number %= 1000;
-    }
-    if (number > 499) {
-        d = number / 500;
-        number %= 500;
-        while (d > 1) {
-            m += 1;
-            d--;
+    while (number > 0) {
+        if (number > 999) {
+            m = number / 1000;
+            number %= 1000;
         }
-    }
-    if (number > 99) {
-        c = number / 100;
-        number %= 100;
-        while (c > 4) {
-            d += 1;
-            c--;
+        if (number > 499) {
+            d = number / 500;
+            number %= 500;
         }
-    }
-    if (number > 49) {
-        l = number / 50;
-        number %= 50;
-        while (l > 1) {
-            c += 1;
-            l--;
+        if (number > 99) {
+            c = number / 100;
+            number %= 100;
         }
-    }
-    if (number > 9) {
-        x = number / 10;
-        number %= 10;
-        while (x > 4) {
-            l += 1;
-            x--;
+        if (number > 49) {
+            l = number / 50;
+            number %= 50;
         }
-    }
-    if (number > 4) {
-        v = number / 5;
-        number %= 5;
-        while (v > 1) {
-            x += 1;
-            v--;
+        if (number > 9) {
+            x = number / 10;
+            number %= 10;
         }
-    }
-    i = number;
-    while (i > 4) {
-        v += 1;
-        i--;
+        if (number > 4) {
+            v = number / 5;
+            number %= 5;
+        } else {
+            i = number;
+            number = 0;
+        }
     }
 
     while (m > 0) {
