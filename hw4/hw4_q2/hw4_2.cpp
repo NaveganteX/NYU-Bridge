@@ -13,7 +13,6 @@ int main() {
     if (number > 999) {
         m = number / 1000;
         number %= 1000;
-//        cout << "M: " << m << endl;
     }
     if (number > 499) {
         d = number / 500;
@@ -22,7 +21,6 @@ int main() {
             m += 1;
             d--;
         }
-//        cout << "D: " << d << endl;
     }
     if (number > 99) {
         c = number / 100;
@@ -31,7 +29,6 @@ int main() {
             d += 1;
             c--;
         }
-//        cout << "C: " << c << endl;
     }
     if (number > 49) {
         l = number / 50;
@@ -40,7 +37,6 @@ int main() {
             c += 1;
             l--;
         }
-//        cout << "L: " << l << endl;
     }
     if (number > 9) {
         x = number / 10;
@@ -49,7 +45,6 @@ int main() {
             l += 1;
             x--;
         }
-//        cout << "X: " << x << endl;
     }
     if (number > 4) {
         v = number / 5;
@@ -58,17 +53,12 @@ int main() {
             x += 1;
             v--;
         }
-//        cout << "V: " << v << endl;
     }
-//    else {
-        i = number;
-        while (i > 4) {
-            v += 1;
-            i--;
-        }
-        number = 0;
-//        cout << "I: " << i << endl;
-//    }
+    i = number;
+    while (i > 4) {
+        v += 1;
+        i--;
+    }
 
     while (m > 0) {
        roman += "M";
