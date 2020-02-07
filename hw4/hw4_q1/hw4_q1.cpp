@@ -2,26 +2,28 @@
 using namespace std;
 
 int main() {
-    int input, number=0;
-
     cout << "section a" << endl;
-    cout << "Please enter a positive integer: ";
-    cin >> input;
 
-    while (input > 0) {
-        number += 2;
-        cout << number << endl;
-        input--;
+    int input_a, number_a=0;
+    cout << "Please enter a positive integer: ";
+    cin >> input_a;
+
+    while (input_a > 0) {
+        number_a += 2;
+        cout << number_a << endl;
+        input_a--;
     }
 
     cout << "section b" << endl;
+
+    int input_b, number_b=0;
     cout << "Please enter a positive integer: ";
-    cin >> input;
+    cin >> input_b;
 
     int counter;
-    for (counter = 0; counter < input; counter++) {
-        number += 2;
-        cout << number << endl;
+    for (counter = 0; counter < input_b; counter++) {
+        number_b += 2;
+        cout << number_b << endl;
     }
 
     return 0;
