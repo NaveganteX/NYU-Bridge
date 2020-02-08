@@ -14,24 +14,19 @@ int main() {
         if (number > 999) {
             m = number / 1000;
             number %= 1000;
-        }
-        if (number > 499) {
+        } else if (number > 499) {
             d = number / 500;
             number %= 500;
-        }
-        if (number > 99) {
+        } else if (number > 99) {
             c = number / 100;
             number %= 100;
-        }
-        if (number > 49) {
+        } else if (number > 49) {
             l = number / 50;
             number %= 50;
-        }
-        if (number > 9) {
+        } else if (number > 9) {
             x = number / 10;
             number %= 10;
-        }
-        if (number > 4) {
+        } else if (number > 4) {
             v = number / 5;
             number %= 5;
         } else {
@@ -69,7 +64,11 @@ int main() {
        i--;
     }
 
-    cout << input << " is " << roman << endl;
+    if (input == 0) {
+        cout << input << " is 0" << endl;
+    } else {
+        cout << input << " is " << roman << endl;
+    }
 
     return 0;
 }
