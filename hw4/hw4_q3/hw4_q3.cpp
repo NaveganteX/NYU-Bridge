@@ -7,8 +7,7 @@ int main() {
     cout << "Enter decimal number: ";
     cin >> decimal_num;
 
-    int digits=0;
-    int num = decimal_num;
+    int num = decimal_num, digits = 0;
     while (num >= 1) {
         num /= 2;
         digits++;
