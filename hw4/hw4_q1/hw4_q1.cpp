@@ -20,8 +20,7 @@ int main() {
     cout << "Please enter a positive integer: ";
     cin >> input_b;
 
-    int counter;
-    for (counter = 0; counter < input_b; counter++) {
+    for (int counter = 0; counter < input_b; counter++) {
         number_b += 2;
         cout << number_b << endl;
     }
