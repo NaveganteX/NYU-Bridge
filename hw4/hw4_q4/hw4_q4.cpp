@@ -16,10 +16,10 @@ int main() {
         product_a *= input_a;
     }
     geometric_mean_a = pow(product_a, (1.0/seq_length_a));
-    cout << geometric_mean_a << endl;
+    cout << "The geometric mean is: " << geometric_mean_a << endl;
 
     cout << "section b" << endl;
-    int input_b, counter=0;
+    int input_b = 0, counter = 0;
     double product_b=1, geometric_mean_b;
 
     cout << "Please enter a non-empty sequence of positive integers, each one in a separate line. End your sequence by typing -1:" << endl;
