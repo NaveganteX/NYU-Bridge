@@ -7,8 +7,7 @@ int main() {
     int random_num, guess;
 
     srand(time(0));
-//    random_num = (rand() % 100) + 1;
-    random_num = 50;
+    random_num = (rand() % 100) + 1;
 
     cout << "I thought of a number between 1 and 100! Try to guess it." << endl;
     for (int guess_count = 5, lower = 1, upper = 100; guess_count > 0; guess_count--) {
