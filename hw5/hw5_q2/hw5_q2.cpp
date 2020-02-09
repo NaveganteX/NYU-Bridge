@@ -17,11 +17,15 @@ int main() {
         cin >> guess;
 
         if (guess < random_num) {
-            lower = guess + 1;
+            if (guess > lower) {
+                lower = guess + 1;
+            }
             cout << "Wrong! My number is bigger." << endl;
             cout << endl;
         } else if (guess > random_num) {
-            upper = guess - 1;
+            if (guess < upper) {
+                upper = guess - 1;
+            }
             cout << "Wrong! My number is smaller." << endl;
             cout << endl;
         } else {
