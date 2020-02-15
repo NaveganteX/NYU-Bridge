@@ -10,7 +10,7 @@ int main() {
     for (int row = 1; row <= n; row++) {
         for (int column = 1; column <= n; column++) {
             int product = column * row;
-            cout << product << "    ";
+            cout << product << "\t";
         }
         cout << endl;
     }
