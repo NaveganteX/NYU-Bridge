@@ -123,32 +123,32 @@ hw5_q2/fast:
 	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/build
 .PHONY : hw5_q2/fast
 
-hw5_q2.o: hw5_q2.cpp.o
+lh3024_hw5_q2.o: lh3024_hw5_q2.cpp.o
 
-.PHONY : hw5_q2.o
+.PHONY : lh3024_hw5_q2.o
 
 # target to build an object file
-hw5_q2.cpp.o:
-	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o
-.PHONY : hw5_q2.cpp.o
+lh3024_hw5_q2.cpp.o:
+	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o
+.PHONY : lh3024_hw5_q2.cpp.o
 
-hw5_q2.i: hw5_q2.cpp.i
+lh3024_hw5_q2.i: lh3024_hw5_q2.cpp.i
 
-.PHONY : hw5_q2.i
+.PHONY : lh3024_hw5_q2.i
 
 # target to preprocess a source file
-hw5_q2.cpp.i:
-	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/hw5_q2.cpp.i
-.PHONY : hw5_q2.cpp.i
+lh3024_hw5_q2.cpp.i:
+	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.i
+.PHONY : lh3024_hw5_q2.cpp.i
 
-hw5_q2.s: hw5_q2.cpp.s
+lh3024_hw5_q2.s: lh3024_hw5_q2.cpp.s
 
-.PHONY : hw5_q2.s
+.PHONY : lh3024_hw5_q2.s
 
 # target to generate assembly for a file
-hw5_q2.cpp.s:
-	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/hw5_q2.cpp.s
-.PHONY : hw5_q2.cpp.s
+lh3024_hw5_q2.cpp.s:
+	$(MAKE) -f CMakeFiles/hw5_q2.dir/build.make CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.s
+.PHONY : lh3024_hw5_q2.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hw5_q2"
-	@echo "... hw5_q2.o"
-	@echo "... hw5_q2.i"
-	@echo "... hw5_q2.s"
+	@echo "... lh3024_hw5_q2.o"
+	@echo "... lh3024_hw5_q2.i"
+	@echo "... lh3024_hw5_q2.s"
 .PHONY : help
 
 

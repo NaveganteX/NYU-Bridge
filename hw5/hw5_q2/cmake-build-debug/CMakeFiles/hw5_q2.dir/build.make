@@ -57,27 +57,27 @@ include CMakeFiles/hw5_q2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hw5_q2.dir/flags.make
 
-CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o: CMakeFiles/hw5_q2.dir/flags.make
-CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o: ../hw5_q2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o -c "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/hw5_q2.cpp"
+CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o: CMakeFiles/hw5_q2.dir/flags.make
+CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o: ../lh3024_hw5_q2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o -c "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/lh3024_hw5_q2.cpp"
 
-CMakeFiles/hw5_q2.dir/hw5_q2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw5_q2.dir/hw5_q2.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/hw5_q2.cpp" > CMakeFiles/hw5_q2.dir/hw5_q2.cpp.i
+CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/lh3024_hw5_q2.cpp" > CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.i
 
-CMakeFiles/hw5_q2.dir/hw5_q2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw5_q2.dir/hw5_q2.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/hw5_q2.cpp" -o CMakeFiles/hw5_q2.dir/hw5_q2.cpp.s
+CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/lh3024_hw5_q2.cpp" -o CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.s
 
 # Object files for target hw5_q2
 hw5_q2_OBJECTS = \
-"CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o"
+"CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o"
 
 # External object files for target hw5_q2
 hw5_q2_EXTERNAL_OBJECTS =
 
-hw5_q2: CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o
+hw5_q2: CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o
 hw5_q2: CMakeFiles/hw5_q2.dir/build.make
 hw5_q2: CMakeFiles/hw5_q2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/lhon001/Development/NYU Bridge/hw5/hw5_q2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hw5_q2"

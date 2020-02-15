@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hw5_q2.dir/hw5_q2.cpp.o"
+  "CMakeFiles/hw5_q2.dir/lh3024_hw5_q2.cpp.o"
   "hw5_q2"
   "hw5_q2.pdb"
 )
