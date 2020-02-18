@@ -2,8 +2,18 @@
 using namespace std;
 
 void printShiftedTriangle(int n, int m, char symbol) {
-    for (int i = 1; i <= n; i++) {
-        for (int c = 1; c <= i; c++) {
+    for (int row = 0; row < n; row++) {
+//        prints margin
+        for (int margin = 0; margin < m; margin++) {
+            cout << " ";
+        }
+//        prints offset
+        int offset_count = n - (row + 1);
+        for (int offset = offset_count; offset > 0; offset--) {
+            cout << " ";
+        }
+//        prints char
+        for (int column = 0; column <= (row * 2); column++) {
             cout << symbol;
         }
         cout << endl;
@@ -11,13 +21,24 @@ void printShiftedTriangle(int n, int m, char symbol) {
 }
 
 void printPineTree(int n, char symbol) {
-
+    for (int i = 1; i <= n; i++) {
+        int number = i + 1;
+        int margin = n - i;
+        printShiftedTriangle(number, margin, symbol);
+    }
 }
 
 int main() {
-    cout << "Hello, World!" << endl;
+    int n_triangle;
+    char symbol;
 
-    printShiftedTriangle(3, 4, '*');
+    cout << "Enter number of triangles: ";
+    cin >> n_triangle;
+
+    cout << "Enter shape: ";
+    cin >> symbol;
+
+    printPineTree(n_triangle, symbol);
     return 0;
 }
 
