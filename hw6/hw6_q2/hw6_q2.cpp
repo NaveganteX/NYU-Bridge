@@ -3,16 +3,13 @@ using namespace std;
 
 void printShiftedTriangle(int n, int m, char symbol) {
     for (int row = 0; row < n; row++) {
-//        prints margin
         for (int margin = 0; margin < m; margin++) {
             cout << " ";
         }
-//        prints offset
         int offset_count = n - (row + 1);
         for (int offset = offset_count; offset > 0; offset--) {
             cout << " ";
         }
-//        prints char
         for (int column = 0; column <= (row * 2); column++) {
             cout << symbol;
         }
@@ -39,6 +36,7 @@ int main() {
     cin >> symbol;
 
     printPineTree(n_triangle, symbol);
+
     return 0;
 }
 
