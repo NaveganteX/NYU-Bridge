@@ -1,18 +1,19 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-// O(N)
-//void printDivisors(int num) {
-//    for (int i = 1; i <= num; i++) {
-//        if (num % i == 0) {
-//            cout << i << " ";
-//        }
-//    }
-//}
-
-// O(sqrt(N))
 void printDivisors(int num) {
+    for (int i = 1; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            cout << i << " ";
+        }
+    }
 
+    for (int i = sqrt(num) - 1; i > 0; i--) {
+        if (num % i == 0) {
+            cout << (num / i) << " ";
+        }
+    }
 }
 
 int main() {
