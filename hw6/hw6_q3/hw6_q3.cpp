@@ -2,33 +2,10 @@
 #include <cmath>
 using namespace std;
 
-//double factorial(int n) {
-//    double fact = 1;
-//    for (int i = 1; i <= n; i ++) {
-//        fact *= i;
-//    }
-//    return fact;
-//}
-//
-//double eApprox(int n) {
-//    double e = 1;
-//    for (int i = 1; i <= n; i++) {
-//        e += 1 / (factorial(i));
-//    }
-//    return e;
-//}
-
-double eApprox(int n) {
-    double e = 1.0, factorial = 1.0;
-    for (int i = 1; i <= n; i++) {
-        factorial *= i;
-        e += 1.0 / factorial;
-    }
-    return e;
-}
+double eApprox(int n);
 
 int main() {
-    int number;
+    int number = 0;
 
     cout << "Enter a positive integer: ";
     cin >> number;
@@ -41,5 +18,14 @@ int main() {
     cout << eApprox(number);
 
     return 0;
+}
+
+double eApprox(int n) {
+    double e = 1.0, factorial = 1.0;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
+        e += 1.0 / factorial;
+    }
+    return e;
 }
 
