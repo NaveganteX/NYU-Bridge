@@ -27,5 +27,4 @@ void printDivisors(int num) {
             cout << b << " ";
         }
     }
-
 }
