@@ -16,21 +16,16 @@ int main() {
 }
 
 void printDivisors(int num) {
-    for (int i = 1; i <= sqrt(num); i++) {
+    for (int i = 1; i < sqrt(num); i++) {
         if (num % i == 0) {
             cout << i << " ";
         }
-        if (num == 2) {
-            cout << 2;
-        }
-        if (num == 3) {
-            cout << 3;
+    }
+
+    for (int b = ceil(sqrt(num)); b <= num; b++) {
+        if (num % b == 0) {
+            cout << b << " ";
         }
     }
 
-    for (int i = sqrt(num) - 1; i > 0; i--) {
-        if (num % i == 0) {
-            cout << (num / i) << " ";
-        }
-    }
 }
