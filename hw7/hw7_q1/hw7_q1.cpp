@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int printMonthCalendar(int numOfDays, int startingDay);
@@ -6,7 +7,6 @@ bool isLeapYear(int year);
 int printYearCalendar(int year, int startingDay);
 
 int main() {
-//    call printYearCalendar: ask what year and what the first day of that year is
     int year = 0, first_day = 0;
     cout << "Please enter a year: ";
     cin >> year;
@@ -26,18 +26,25 @@ int printMonthCalendar(int numOfDays, int startingDay) {
         cout << "\t";
     }
 
+    int dayCount = startingDay;
     for (int i = 1; i <= numOfDays; i++) {
         cout << i << "\t";
         if ((i + startingDay - 1) % 7 == 0) {
-            cout << endl;
+            if (i != numOfDays) {
+                cout << endl;
+            }
+        }
+        dayCount++;
+        if (dayCount == 8) {
+            dayCount = 1;
         }
     }
 
-    return 0;
+    return dayCount;
 }
 
 int printYearCalendar(int year, int startingDay) {
-    int days_in_month = 0;
+    int days_in_month = 0, offSet = 0;
     string month;
 
     for (int i = 1; i <= 12; i++) {
@@ -83,66 +90,12 @@ int printYearCalendar(int year, int startingDay) {
             days_in_month = 31;
         }
 
-//        switch (i) {
-//            case 1:
-//                month = "January";
-//                days_in_month = 31;
-//                break;
-//            case 2:
-//                month = "February";
-//                if (isLeapYear(year)) {
-//                    days_in_month = 29;
-//                } else {
-//                    days_in_month = 28;
-//                }
-//                break;
-//            case 3:
-//                month = "March";
-//                days_in_month = 31;
-//                break;
-//            case 4:
-//                month = "April";
-//                days_in_month = 30;
-//                break;
-//            case 5:
-//                month = "May";
-//                days_in_month = 31;
-//                break;
-//            case 6:
-//                month = "June";
-//                days_in_month = 30;
-//                break;
-//            case 7:
-//                month = "July";
-//                days_in_month = 31;
-//                break;
-//            case 8:
-//                month = "August";
-//                days_in_month = 31;
-//                break;
-//            case 9:
-//                month = "September";
-//                days_in_month = 30;
-//                break;
-//            case 10:
-//                month = "October";
-//                days_in_month = 31;
-//                break;
-//            case 11:
-//                month = "November";
-//                days_in_month = 30;
-//                break;
-//            case 12:
-//                month = "December";
-//                days_in_month = 31;
-//                break;
-//            default:
-//                cout << endl;
-//                break;
-//        }
-
         cout << month << " " << year << endl;
-        printMonthCalendar(days_in_month, startingDay);
+        if (i == 1) {
+            offSet = printMonthCalendar(days_in_month, startingDay);
+        } else {
+            offSet = printMonthCalendar(days_in_month, offSet);
+        }
         cout << endl;
         cout << endl;
     }
@@ -159,5 +112,3 @@ bool isLeapYear(int year) {
     }
     return true;
 }
-
-
