@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-void analyzeDividers (int num, int& outCountDivs, int& outSumDivs);
+void analyzeDivisors (int num, int& outCountDivs, int& outSumDivs);
 bool isPerfect (int num);
 
 int main() {
@@ -23,10 +23,10 @@ int main() {
     cout << "All the amicable number pairs between " << 2 << " to " << m << " are:" << endl;
     for (int b = m; b > 0; b--) {
         int countDiv = 0, sumDiv = 0, duplicateTracker;
-        analyzeDividers(b, countDiv, sumDiv);
+        analyzeDivisors(b, countDiv, sumDiv);
 
         int tempCountDiv = 0, tempSumDiv = 0;
-        analyzeDividers(sumDiv, tempCountDiv, tempSumDiv);
+        analyzeDivisors(sumDiv, tempCountDiv, tempSumDiv);
         if ((b == tempSumDiv) && (b != sumDiv)) {
             if (b != duplicateTracker) {
                 cout << "(" << b << " " << sumDiv << ")" << endl;
@@ -38,7 +38,7 @@ int main() {
     return 0;
 }
 
-void analyzeDividers (int num, int& outCountDivs, int& outSumDivs) {
+void analyzeDivisors (int num, int& outCountDivs, int& outSumDivs) {
     for (int i = 1; i < sqrt(num); i++) {
         if (num % i == 0) {
             outCountDivs++;
@@ -57,7 +57,7 @@ void analyzeDividers (int num, int& outCountDivs, int& outSumDivs) {
 
 bool isPerfect (int num) {
     int outCountDivs = 0, outSumDivs = 0;
-    analyzeDividers(num, outCountDivs, outSumDivs);
+    analyzeDivisors(num, outCountDivs, outSumDivs);
     if (outSumDivs == num) {
         return true;
     }
