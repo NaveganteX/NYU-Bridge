@@ -9,15 +9,30 @@ int main() {
     int m;
     cout << "Please enter an integer >= 2: ";
     cin >> m;
+    cout << endl;
 
+    cout << "All the perfect numbers between " << 2 << " to " << m << " are:" << endl;
     for (int i = 2; i <= m; i++) {
         if (isPerfect(i)) {
-            cout << i << endl;
+            cout << i << " ";
         }
     }
+    cout << endl;
+    cout << endl;
 
-    for (int b = 2; b <= m; b++) {
-        
+    cout << "All the amicable number pairs between " << 2 << " to " << m << " are:" << endl;
+    for (int b = m; b > 0; b--) {
+        int countDiv = 0, sumDiv = 0, duplicateTracker;
+        analyzeDividers(b, countDiv, sumDiv);
+
+        int tempCountDiv = 0, tempSumDiv = 0;
+        analyzeDividers(sumDiv, tempCountDiv, tempSumDiv);
+        if ((b == tempSumDiv) && (b != sumDiv)) {
+            if (b != duplicateTracker) {
+                cout << "(" << b << " " << sumDiv << ")" << endl;
+                duplicateTracker = sumDiv;
+            }
+        }
     }
 
     return 0;
@@ -26,7 +41,6 @@ int main() {
 void analyzeDividers (int num, int& outCountDivs, int& outSumDivs) {
     for (int i = 1; i < sqrt(num); i++) {
         if (num % i == 0) {
-//            cout << i << " ";
             outCountDivs++;
             outSumDivs += i;
         }
@@ -34,21 +48,18 @@ void analyzeDividers (int num, int& outCountDivs, int& outSumDivs) {
 
     for (int b = ceil(sqrt(num)); b <= num; b++) {
         if (num % b == 0) {
-//            cout << b << " ";
             outCountDivs++;
             outSumDivs += b;
         }
     }
+    outSumDivs -= num;
 }
 
 bool isPerfect (int num) {
     int outCountDivs = 0, outSumDivs = 0;
     analyzeDividers(num, outCountDivs, outSumDivs);
-    if ((outSumDivs - num) == num) {
-//        cout << "outSumDivs: " << outSumDivs << endl;
-//        cout << "true";
+    if (outSumDivs == num) {
         return true;
     }
-//    cout << "false";
     return false;
 }
