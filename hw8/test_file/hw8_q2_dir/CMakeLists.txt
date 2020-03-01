@@ -3,4 +3,6 @@ project(hw8_q2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hw8_q2 hw8_q2.cpp)
+#add_subdirectory(Google_tests)
+
+add_executable(hw8_q2_dir hw8_q2.cpp)
