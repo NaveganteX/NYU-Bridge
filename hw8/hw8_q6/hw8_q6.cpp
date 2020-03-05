@@ -12,9 +12,13 @@ int main() {
 
     for (int i = 0; i < input.length(); i++) {
         int len = 0;
-        if (input[i] == 32) {
+        if ((input[i] == 32) || ((input[i] >= 48) && (input[i] <= 57))){
             if (checkNum(i, input, len)) {
-                replace(i, len, input);
+                if (input[i] == 32) {
+                    replace(i + 1, len, input);
+                } else {
+                    replace(i, len + 1, input);
+                }
             }
             i += len;
         }
@@ -25,7 +29,7 @@ int main() {
 }
 
 void replace(int startingIndex, int length, string &str) {
-    for (int i = startingIndex + 1; i < (startingIndex + length + 1); i++) {
+    for (int i = startingIndex; i < (startingIndex + length); i++) {
         str[i] = 'x';
     }
 }
