@@ -13,13 +13,9 @@ int main() {
 
     for (int i = 0; i < input.length(); i++) {
         int len = 0;
-        if ((input[i] == 32) || ((input[i] >= 48) && (input[i] <= 57))){
+        if (input[i] == 32) {
             if (checkNum(i, input, len)) {
-                if (input[i] == 32) {
-                    replace(i + 1, len, input);
-                } else {
-                    replace(i, len + 1, input);
-                }
+                replace(i + 1, len, input);
             }
             i += len;
         }
