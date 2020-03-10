@@ -123,32 +123,32 @@ memAlloc/fast:
 	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/build
 .PHONY : memAlloc/fast
 
-memAlloc.o: memAlloc.cpp.o
+dynamicMemory.o: dynamicMemory.cpp.o
 
-.PHONY : memAlloc.o
+.PHONY : dynamicMemory.o
 
 # target to build an object file
-memAlloc.cpp.o:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/memAlloc.cpp.o
-.PHONY : memAlloc.cpp.o
+dynamicMemory.cpp.o:
+	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o
+.PHONY : dynamicMemory.cpp.o
 
-memAlloc.i: memAlloc.cpp.i
+dynamicMemory.i: dynamicMemory.cpp.i
 
-.PHONY : memAlloc.i
+.PHONY : dynamicMemory.i
 
 # target to preprocess a source file
-memAlloc.cpp.i:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/memAlloc.cpp.i
-.PHONY : memAlloc.cpp.i
+dynamicMemory.cpp.i:
+	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.i
+.PHONY : dynamicMemory.cpp.i
 
-memAlloc.s: memAlloc.cpp.s
+dynamicMemory.s: dynamicMemory.cpp.s
 
-.PHONY : memAlloc.s
+.PHONY : dynamicMemory.s
 
 # target to generate assembly for a file
-memAlloc.cpp.s:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/memAlloc.cpp.s
-.PHONY : memAlloc.cpp.s
+dynamicMemory.cpp.s:
+	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.s
+.PHONY : dynamicMemory.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... memAlloc"
-	@echo "... memAlloc.o"
-	@echo "... memAlloc.i"
-	@echo "... memAlloc.s"
+	@echo "... dynamicMemory.o"
+	@echo "... dynamicMemory.i"
+	@echo "... dynamicMemory.s"
 .PHONY : help
 
 

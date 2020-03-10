@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/memAlloc.cpp">
+		<Unit filename="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp">
 			<Option target="memAlloc"/>
 		</Unit>
 		<Unit filename="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/CMakeLists.txt">

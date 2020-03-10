@@ -57,27 +57,27 @@ include CMakeFiles/memAlloc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/memAlloc.dir/flags.make
 
-CMakeFiles/memAlloc.dir/memAlloc.cpp.o: CMakeFiles/memAlloc.dir/flags.make
-CMakeFiles/memAlloc.dir/memAlloc.cpp.o: ../memAlloc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/memAlloc.dir/memAlloc.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/memAlloc.dir/memAlloc.cpp.o -c "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/memAlloc.cpp"
+CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o: CMakeFiles/memAlloc.dir/flags.make
+CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o: ../dynamicMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o -c "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp"
 
-CMakeFiles/memAlloc.dir/memAlloc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/memAlloc.dir/memAlloc.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/memAlloc.cpp" > CMakeFiles/memAlloc.dir/memAlloc.cpp.i
+CMakeFiles/memAlloc.dir/dynamicMemory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/memAlloc.dir/dynamicMemory.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp" > CMakeFiles/memAlloc.dir/dynamicMemory.cpp.i
 
-CMakeFiles/memAlloc.dir/memAlloc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/memAlloc.dir/memAlloc.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/memAlloc.cpp" -o CMakeFiles/memAlloc.dir/memAlloc.cpp.s
+CMakeFiles/memAlloc.dir/dynamicMemory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/memAlloc.dir/dynamicMemory.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp" -o CMakeFiles/memAlloc.dir/dynamicMemory.cpp.s
 
 # Object files for target memAlloc
 memAlloc_OBJECTS = \
-"CMakeFiles/memAlloc.dir/memAlloc.cpp.o"
+"CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o"
 
 # External object files for target memAlloc
 memAlloc_EXTERNAL_OBJECTS =
 
-memAlloc: CMakeFiles/memAlloc.dir/memAlloc.cpp.o
+memAlloc: CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o
 memAlloc: CMakeFiles/memAlloc.dir/build.make
 memAlloc: CMakeFiles/memAlloc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable memAlloc"

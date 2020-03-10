@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/memAlloc.dir/memAlloc.cpp.o"
+  "CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o"
   "memAlloc"
   "memAlloc.pdb"
 )

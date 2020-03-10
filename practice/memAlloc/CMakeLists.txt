@@ -3,4 +3,4 @@ project(memAlloc)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(memAlloc memAlloc.cpp)
+add_executable(memAlloc dynamicMemory.cpp)

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/memAlloc.cpp" "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/memAlloc.dir/memAlloc.cpp.o"
+  "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp" "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
