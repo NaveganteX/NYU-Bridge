@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int n, divisor_Count;
+    int n = 0, divisor_Count = 0;
     cout << "Input a number: ";
     cin >> n;
 
