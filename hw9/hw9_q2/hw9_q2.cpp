@@ -18,6 +18,7 @@ int main() {
         if (letterAmount != 0) {
             outputOne += ABC[i];
             letterSumOne += ABC[i];
+            letterSumOne *= letterAmount;
         }
     }
 
@@ -30,13 +31,14 @@ int main() {
         if (letterAmount != 0) {
             outputTwo += ABC[i];
             letterSumTwo += ABC[i];
+            letterSumTwo *= letterAmount;
         }
     }
 
     if ((outputOne == outputTwo) && (letterSumOne == letterSumTwo)) {
-        cout << "'" << inputOne << "' and '" << inputTwo << "' are anagrams" << endl;
+        cout << "True! \"" << inputOne << "\" and \"" << inputTwo << "\" are anagrams." << endl;
     } else {
-        cout << "'" << inputOne << "' and '" << inputTwo << "' are not anagrams" << endl;
+        cout << "False! \"" << inputOne << "\" and \"" << inputTwo << "\" are not anagrams." << endl;
     }
 
     return 0;
@@ -50,5 +52,6 @@ int numberOfLetters(char letter, string text) {
             letterCount++;
         }
     }
+//    cout << "letterCount: " << letterCount << endl;
     return letterCount;
 }
