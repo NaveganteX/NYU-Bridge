@@ -13,11 +13,18 @@ int main() {
     getline(cin, sentence);
 
     wordsArray = createWordsArray(sentence, wordsArrSize);
-    cout << wordsArrSize << endl;
 
     for (int i = 0; i < wordsArrSize; i++) {
-        cout << wordsArray[i] << ", ";
+        if (i == (wordsArrSize - 1)) {
+            cout << wordsArray[i];
+        } else {
+            cout << wordsArray[i] << ", ";
+        }
     }
+
+    cout << endl;
+    cout << "New array size: " << wordsArrSize << endl;
+
     return 0;
 }
 
@@ -27,24 +34,20 @@ string* createWordsArray(string sentence, int& outWordsArrSize) {
     int tempStringArrayCounter = 0, tempOutWordsArrSize = 1;
 
     for (int i = 0; i < sentence.length(); i++) {
-        if (((sentence[i] <= 65) || (sentence[i] >= 90)) && ((sentence[i] <= 97) || (sentence[i] >= 122))) {
-            if ( ((i != 0) && (sentence[i] != 32)) || (i == (sentence.length() - 1))) {
-                tempOutWordsArrSize++;
-            }
+        if ((i != 0) && (sentence[i] == 32)) {
+            tempOutWordsArrSize += 1;
         }
     }
 
-    cout << "tempOutWordsArrSize: " << tempOutWordsArrSize << endl;
     tempStringArray = new string[tempOutWordsArrSize];
 
-    for (int i = 0; i <= sentence.length(); i++) {
-        if (((sentence[i] >= 65) && (sentence[i] <= 90)) || ((sentence[i] >= 97) && (sentence[i] <= 122))) {
-            if ((sentence[i] != 32) && (sentence[i] != 63) && (sentence[i] != 46)) {
-                tempWord += sentence[i];
-                cout << "tempWord: " << tempWord << endl;
+    for (int i = 0; i < sentence.length(); i++) {
+        int letter = sentence[i];
+        if (((letter >= 65) && (letter <= 90)) || ((letter >= 97) && (letter <= 122)) || (letter == 39)) {
+            if ((letter != 32) && (letter != 63) && (letter != 46)) {
+                tempWord += letter;
             }
         } else {
-            cout << "tempWord: " << tempWord << endl;
             tempStringArray[tempStringArrayCounter] = tempWord;
             tempStringArrayCounter++;
             tempWord = "";
@@ -57,7 +60,6 @@ string* createWordsArray(string sentence, int& outWordsArrSize) {
         }
     }
 
-    cout << tempOutWordsArrSize << endl;
     outWordsArrSize = tempOutWordsArrSize;
     return tempStringArray;
 }
