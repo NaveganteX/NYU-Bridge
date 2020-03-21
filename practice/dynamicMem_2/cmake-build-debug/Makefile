@@ -48,10 +48,10 @@ RM = "/Users/lhon001/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/lhon001/Development/NYU Bridge/practice/memAlloc"
+CMAKE_SOURCE_DIR = /Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles" "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2/cmake-build-debug/CMakeFiles /Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named memAlloc
+# Target rules for targets named dynamicMem_2
 
 # Build rule for target.
-memAlloc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 memAlloc
-.PHONY : memAlloc
+dynamicMem_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamicMem_2
+.PHONY : dynamicMem_2
 
 # fast build rule for target.
-memAlloc/fast:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/build
-.PHONY : memAlloc/fast
+dynamicMem_2/fast:
+	$(MAKE) -f CMakeFiles/dynamicMem_2.dir/build.make CMakeFiles/dynamicMem_2.dir/build
+.PHONY : dynamicMem_2/fast
 
-dynamicMemory.o: dynamicMemory.cpp.o
+dynamicMem_2.o: dynamicMem_2.cpp.o
 
-.PHONY : dynamicMemory.o
+.PHONY : dynamicMem_2.o
 
 # target to build an object file
-dynamicMemory.cpp.o:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.o
-.PHONY : dynamicMemory.cpp.o
+dynamicMem_2.cpp.o:
+	$(MAKE) -f CMakeFiles/dynamicMem_2.dir/build.make CMakeFiles/dynamicMem_2.dir/dynamicMem_2.cpp.o
+.PHONY : dynamicMem_2.cpp.o
 
-dynamicMemory.i: dynamicMemory.cpp.i
+dynamicMem_2.i: dynamicMem_2.cpp.i
 
-.PHONY : dynamicMemory.i
+.PHONY : dynamicMem_2.i
 
 # target to preprocess a source file
-dynamicMemory.cpp.i:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.i
-.PHONY : dynamicMemory.cpp.i
+dynamicMem_2.cpp.i:
+	$(MAKE) -f CMakeFiles/dynamicMem_2.dir/build.make CMakeFiles/dynamicMem_2.dir/dynamicMem_2.cpp.i
+.PHONY : dynamicMem_2.cpp.i
 
-dynamicMemory.s: dynamicMemory.cpp.s
+dynamicMem_2.s: dynamicMem_2.cpp.s
 
-.PHONY : dynamicMemory.s
+.PHONY : dynamicMem_2.s
 
 # target to generate assembly for a file
-dynamicMemory.cpp.s:
-	$(MAKE) -f CMakeFiles/memAlloc.dir/build.make CMakeFiles/memAlloc.dir/dynamicMemory.cpp.s
-.PHONY : dynamicMemory.cpp.s
+dynamicMem_2.cpp.s:
+	$(MAKE) -f CMakeFiles/dynamicMem_2.dir/build.make CMakeFiles/dynamicMem_2.dir/dynamicMem_2.cpp.s
+.PHONY : dynamicMem_2.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... memAlloc"
-	@echo "... dynamicMemory.o"
-	@echo "... dynamicMemory.i"
-	@echo "... dynamicMemory.s"
+	@echo "... dynamicMem_2"
+	@echo "... dynamicMem_2.o"
+	@echo "... dynamicMem_2.i"
+	@echo "... dynamicMem_2.s"
 .PHONY : help
 
 

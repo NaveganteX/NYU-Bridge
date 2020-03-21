@@ -1,3 +1,0 @@
-/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/lhon001/Development/NYU Bridge/practice/memAlloc/cmake-build-debug/CMakeFiles/memAlloc.dir

@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/lhon001/Development/NYU Bridge/practice/memAlloc/dynamicMemory.cpp
+/Users/lhon001/Development/NYU_Bridge/practice/dynamicMem_2/dynamicMem_2.cpp
 iostream
+-
+string
 -
 
