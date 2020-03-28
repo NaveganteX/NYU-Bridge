@@ -5,11 +5,14 @@ int lowestCost(int arr[], int arrSize);
 
 int main() {
     int arr1[6] = {0, 3, 80, 6, 57, 10};
-    int arr2[10] = {0, 10, 11, 5, 2, 8, 3, 7, 14, 2};
+    int arr2[10] = {0, 20, 11, 5, 13, 7, 18, 13, 14, 2};
 
-    int result = lowestCost(arr1, 6);
-//    int result = lowestCost(arr2, 10);
-    cout << "result: " << result << endl;
+    int arr1Result = lowestCost(arr1, 6);
+    int arr2Result = lowestCost(arr2, 10);
+
+    cout << "arr1 lowest cost: " << arr1Result << endl;
+    cout << "arr2 lowest cost: " << arr2Result << endl;
+
     return 0;
 }
 
