@@ -47,31 +47,46 @@ public:
 //        check_money.output(cout);
     };
 
-    void getValue() const {
-        cout << this->check_amount << endl;
+    double getValue() const {
+        return check_amount;
     }
+
+    bool getCashedStatus() const {
+//        cout << "is_cashed: " << is_cashed << endl;
+        return is_cashed;
+    }
+
 };
+
+double sumCashedChecks(vector<Check>& check_vector);
 
 int main() {
     int end, check_number, check_cashed;
-    double check_amount;
+    double check_amount, new_account_balance, old_account_balance, deposit_amount;
     bool end_input = false, cashed = true;
     vector<Check> check_vector;
+    vector<Money> deposit_vector;
 
 //    Check test(334586, 13.45, true);
 //    test.record_check_amount();
+    cout << "Please enter you old account balance:" << endl;
+    cin >> old_account_balance;
+
+    cout << "Please enter what your new account balance should be:" << endl;
+    cin >> new_account_balance;
+
     while (end_input == false) {
         cout << "Please enter the check number, check amount and "
                 "if check has been cashed or not (Yes: 1, No: 0). \nSeparate each info entry by a space." << endl;
         cin >> check_number >> check_amount >> check_cashed;
         if (check_cashed == 0) {
-           cashed == false;
+           cashed = false;
         } else {
-            cashed == true;
+            cashed = true;
         }
         cin.ignore();
-        Check input(check_number, check_amount, cashed);
-        check_vector.push_back(input);
+        Check input_check(check_number, check_amount, cashed);
+        check_vector.push_back(input_check);
         cout << "Would you like to enter another check? (Yes: 1, No: -1)" << endl;
         cin >> end;
         if (end == -1) {
@@ -82,15 +97,42 @@ int main() {
         cin.ignore();
     }
 
-    for (int i = 0; i < check_vector.size(); i++) {
-        check_vector[i].getValue();
+    end_input = false;
+    while (end_input == false) {
+        cout << "Please enter deposit amounts separated by a space." << endl;
+        cout << "Enter -1 to finish." << endl;
+
+        cin >> deposit_amount;
+        cin.ignore();
+        Money input_money(deposit_amount);
+        deposit_vector.push_back(input_money);
     }
+
+
+//    for (int i = 0; i < check_vector.size(); i++) {
+//        check_vector[i].getValue();
+//    }
+
+    cout << sumCashedChecks(check_vector) << endl;
+
+//    read in deposits
+//    while ()
 
     return 0;
 }
 
 int digit_to_int(char c) {
     return (static_cast<int>(c) - static_cast<int>('0'));
+}
+double sumCashedChecks(vector<Check>& check_vector) {
+    double sum = 0;
+    for (int i = 0; i < check_vector.size(); i++) {
+//        cout << check_vector[i].getCashedStatus() << endl;
+        if (check_vector[i].getCashedStatus() == true) {
+            sum += check_vector[i].getValue();
+        }
+    }
+    return sum;
 }
 
 Money operator +(const Money& amount1, const Money& amount2) {
