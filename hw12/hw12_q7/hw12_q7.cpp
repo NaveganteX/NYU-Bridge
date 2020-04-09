@@ -9,7 +9,6 @@ private:
     long all_cents;
 
 public:
-    Money(long dollars, int cents);
     explicit Money(long dollars);
     Money();
 
@@ -42,39 +41,41 @@ public:
     Check(int new_check_number, double new_check_amount, bool new_is_cashed)
     :check_number(new_check_number), check_amount(new_check_amount), is_cashed(new_is_cashed) {}
 
-    void record_check_amount() {
+    void recordCheckAmount() {
         check_money.setValue(this->check_amount);
-//        check_money.output(cout);
     };
 
+    Money getCheckMoney() {
+        return check_money;
+    }
+    
+    double getMoneyAmount(Money money_amount) {
+        return money_amount.getValue();
+    }
     double getValue() const {
         return check_amount;
     }
 
     bool getCashedStatus() const {
-//        cout << "is_cashed: " << is_cashed << endl;
         return is_cashed;
     }
 
 };
 
 double sumCashedChecks(vector<Check>& check_vector);
+double sumUncashedChecks(vector<Check>& check_vector);
+double sumDeposits(vector<Money>& deposit_vector);
+double newCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks);
+double actualCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks);
 
 int main() {
     int end, check_number, check_cashed;
     double check_amount, new_account_balance, old_account_balance, deposit_amount;
-    bool end_input = false, cashed = true;
+    bool end_input, cashed = true;
     vector<Check> check_vector;
     vector<Money> deposit_vector;
 
-//    Check test(334586, 13.45, true);
-//    test.record_check_amount();
-    cout << "Please enter you old account balance:" << endl;
-    cin >> old_account_balance;
-
-    cout << "Please enter what your new account balance should be:" << endl;
-    cin >> new_account_balance;
-
+    end_input = false;
     while (end_input == false) {
         cout << "Please enter the check number, check amount and "
                 "if check has been cashed or not (Yes: 1, No: 0). \nSeparate each info entry by a space." << endl;
@@ -96,43 +97,92 @@ int main() {
         }
         cin.ignore();
     }
+    double sum_cashed_checks;
+    sum_cashed_checks = sumCashedChecks(check_vector);
+    cout << "sum_cashed_checks: " << sum_cashed_checks << endl;
 
+    double sum_uncashed_checks;
+    sum_uncashed_checks = sumUncashedChecks(check_vector);
+    cout << "sum_uncashed_checks: " << sum_uncashed_checks << endl;
+
+    end = 0;
     end_input = false;
     while (end_input == false) {
-        cout << "Please enter deposit amounts separated by a space." << endl;
-        cout << "Enter -1 to finish." << endl;
-
+        cout << "Please enter a deposit amount" << endl;
         cin >> deposit_amount;
         cin.ignore();
+        deposit_amount *= 100;
         Money input_money(deposit_amount);
         deposit_vector.push_back(input_money);
+        cout << "Would you like to enter another deposit amount? (Yes: 1, No: -1)" << endl;
+        cin >> end;
+        if (end == -1) {
+            end_input = true;
+        }
+        cin.ignore();
     }
+    double sum_deposits;
+    sum_deposits = sumDeposits(deposit_vector);
+    cout << "sum_deposits: " << sum_deposits << endl;
 
+    cout << "Please enter your old account balance:" << endl;
+    cin >> old_account_balance;
+    Money old_balance(old_account_balance);
 
-//    for (int i = 0; i < check_vector.size(); i++) {
-//        check_vector[i].getValue();
-//    }
+    cout << "Please enter what your new account balance should be:" << endl;
+    cin >> new_account_balance;
+    Money new_balance(new_account_balance);
 
-    cout << sumCashedChecks(check_vector) << endl;
-
-//    read in deposits
-//    while ()
+    double calculated_new_account_balance;
+    calculated_new_account_balance = newCalculatedAccountBalance(old_balance.getValue(), sum_deposits, sum_uncashed_checks, sum_cashed_checks);
+    cout << "Calculated Balance: " << calculated_new_account_balance << endl;
+    
+    double calculated_actual_balance;
+    calculated_actual_balance = actualCalculatedAccountBalance(old_account_balance, new_account_balance, sum_cashed_checks);
+    cout << "Bank Balance: " << calculated_actual_balance << endl;
 
     return 0;
 }
 
-int digit_to_int(char c) {
+int digitToInt(char c) {
     return (static_cast<int>(c) - static_cast<int>('0'));
 }
 double sumCashedChecks(vector<Check>& check_vector) {
-    double sum = 0;
+    long sum = 0;
     for (int i = 0; i < check_vector.size(); i++) {
-//        cout << check_vector[i].getCashedStatus() << endl;
+        check_vector[i].recordCheckAmount();
         if (check_vector[i].getCashedStatus() == true) {
-            sum += check_vector[i].getValue();
+            cout << "checks money amount: " << check_vector[i].getMoneyAmount(check_vector[i].getCheckMoney()) << endl;
+            sum += check_vector[i].getMoneyAmount(check_vector[i].getCheckMoney());
         }
     }
     return sum;
+}
+double sumUncashedChecks(vector<Check>& check_vector) {
+    long sum = 0;
+    for (int i = 0; i < check_vector.size(); i++) {
+        check_vector[i].recordCheckAmount();
+        if (check_vector[i].getCashedStatus() == false) {
+            sum += check_vector[i].getMoneyAmount(check_vector[i].getCheckMoney());
+        }
+    }
+    return sum;
+}
+double sumDeposits(vector<Money>& deposit_vector) {
+    double sum;
+    for (int i = 0; i < deposit_vector.size(); i++) {
+        sum += deposit_vector[i].getValue();
+    }
+    return sum;
+}
+double newCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks) {
+    return old_balance + sum_deposits - (sum_cashed_checks  + sum_uncashed_checks);
+}
+double actualCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks) {
+    return old_balance + sum_deposits - sum_cashed_checks;
+}
+double accountBalanceDifference(double bank_balance, double calculated_balance) {
+    return calculated_balance - bank_balance;
 }
 
 Money operator +(const Money& amount1, const Money& amount2) {
@@ -189,7 +239,7 @@ istream& operator >>(istream& ins, Money& amount) {
         exit(1);
     }
 
-    cents = digit_to_int(digit1) * 10 + digit_to_int(digit2);
+    cents = digitToInt(digit1) * 10 + digitToInt(digit2);
 
     amount.all_cents = dollars * 100 + cents;
     if (negative) {
@@ -216,16 +266,7 @@ ostream& operator <<(ostream& outs, const Money& amount) {
 
     return outs;
 }
-Money::Money(long dollars, int cents) {
-    if (dollars * cents < 0) {
-        cout << "Illegal values for dollars and cents." << endl;
-    } else {
-        all_cents = (dollars * 100) + cents;
-    }
-}
-Money::Money(long dollars) {
-    all_cents = dollars * 100;
-}
+Money::Money(long dollars) { all_cents = dollars; }
 Money::Money() { all_cents = 0.00; }
 void Money::input(istream& ins) {
     char one_char, decimal_point, digit1, digit2;
@@ -246,7 +287,7 @@ void Money::input(istream& ins) {
         exit(1);
     }
 
-    cents = digit_to_int(digit1) * 10 + digit_to_int(digit2);
+    cents = digitToInt(digit1) * 10 + digitToInt(digit2);
     all_cents = dollars * 100 + cents;
 
     if (negative) {
@@ -271,45 +312,8 @@ void Money::output(ostream& outs) {
 
     outs << cents;
 }
-double Money::getValue() const { return all_cents * 0.01; }
+double Money::getValue() const {
+    double all_cents_double = all_cents * 0.01;
+    return all_cents_double;
+}
 void Money::setValue(double amount) { this->all_cents = amount * 100; }
-
-//    Money your_amount, my_amount(10, 9), out_amount;
-//    cout << "Enter an amount of money: ";
-//    your_amount.input(cin);
-//    cout << "Your amount is ";
-//    your_amount.output(cout);
-//    cout << endl;
-//    cout << "My amount is ";
-//    my_amount.output(cout);
-//    cout << endl;
-//    out_amount = -your_amount;
-//    out_amount.output(cout);
-
-//    Money amount[5], max;
-//    int i;
-//    cout << "Enter 5 amounts of money: " << endl;
-//    cin >> amount[0];
-//    max = amount[0];
-//
-//    for (i = 1; i < 5; i++) {
-//        cin >> amount[i];
-//        if (max < amount[i]) {
-//            max = amount[i];
-//        }
-//    }
-//
-//    Money difference[5];
-//    for (i = 0; i < 5; i++) {
-//        difference[i] = max - amount[i];
-//    }
-//
-//    cout << "The highest amount is " << max << endl;
-//    cout << "The amounts and their differences from the largest are:" << endl;
-//
-//    for (i = 0; i < 5; i++) {
-//        cout << amount[i] << " off by " << difference[i] << endl;
-//    }
-
-
-
