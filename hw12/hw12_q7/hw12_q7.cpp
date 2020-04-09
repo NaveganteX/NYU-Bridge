@@ -65,12 +65,13 @@ public:
 double sumCashedChecks(vector<Check>& check_vector);
 double sumUncashedChecks(vector<Check>& check_vector);
 double sumDeposits(vector<Money>& deposit_vector);
-double newCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks);
-double actualCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks);
+double calculatedBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks);
+double bankAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks);
+double accountBalanceDifference(double bank_balance, double calculated_balance);
 
 int main() {
     int end, check_number, check_cashed;
-    double check_amount, new_account_balance, old_account_balance, deposit_amount;
+    double check_amount, deposit_amount;
     bool end_input, cashed = true;
     vector<Check> check_vector;
     vector<Money> deposit_vector;
@@ -99,11 +100,11 @@ int main() {
     }
     double sum_cashed_checks;
     sum_cashed_checks = sumCashedChecks(check_vector);
-    cout << "sum_cashed_checks: " << sum_cashed_checks << endl;
+    cout << "Sum of cashed checks: $" << sum_cashed_checks << endl;
 
     double sum_uncashed_checks;
     sum_uncashed_checks = sumUncashedChecks(check_vector);
-    cout << "sum_uncashed_checks: " << sum_uncashed_checks << endl;
+    cout << "Sum of uncashed checks: $" << sum_uncashed_checks << endl;
 
     end = 0;
     end_input = false;
@@ -123,24 +124,31 @@ int main() {
     }
     double sum_deposits;
     sum_deposits = sumDeposits(deposit_vector);
-    cout << "sum_deposits: " << sum_deposits << endl;
+    cout << "Sum of deposits: $" << sum_deposits << endl;
 
+    double old_account_balance;
     cout << "Please enter your old account balance:" << endl;
     cin >> old_account_balance;
+    old_account_balance *= 100;
     Money old_balance(old_account_balance);
 
+    double new_account_balance;
     cout << "Please enter what your new account balance should be:" << endl;
     cin >> new_account_balance;
+    new_account_balance *= 100;
     Money new_balance(new_account_balance);
 
-    double calculated_new_account_balance;
-    calculated_new_account_balance = newCalculatedAccountBalance(old_balance.getValue(), sum_deposits, sum_uncashed_checks, sum_cashed_checks);
-    cout << "Calculated Balance: " << calculated_new_account_balance << endl;
-    
-    double calculated_actual_balance;
-    calculated_actual_balance = actualCalculatedAccountBalance(old_account_balance, new_account_balance, sum_cashed_checks);
-    cout << "Bank Balance: " << calculated_actual_balance << endl;
+    double calculated_account_balance;
+    calculated_account_balance = calculatedBalance(old_balance.getValue(), sum_deposits, sum_uncashed_checks, sum_cashed_checks);
+    cout << "Calculated Balance: $" << calculated_account_balance << endl;
 
+    double bank_balance;
+    bank_balance = bankAccountBalance(old_balance.getValue(), sum_deposits, sum_cashed_checks);
+    cout << "Bank Balance: $" << bank_balance << endl;
+
+    double balance_difference;
+    balance_difference = accountBalanceDifference(calculated_account_balance, bank_balance);
+    cout << "Balance Difference: $" << balance_difference << endl;
     return 0;
 }
 
@@ -148,18 +156,17 @@ int digitToInt(char c) {
     return (static_cast<int>(c) - static_cast<int>('0'));
 }
 double sumCashedChecks(vector<Check>& check_vector) {
-    long sum = 0;
+    double sum = 0;
     for (int i = 0; i < check_vector.size(); i++) {
         check_vector[i].recordCheckAmount();
         if (check_vector[i].getCashedStatus() == true) {
-            cout << "checks money amount: " << check_vector[i].getMoneyAmount(check_vector[i].getCheckMoney()) << endl;
             sum += check_vector[i].getMoneyAmount(check_vector[i].getCheckMoney());
         }
     }
     return sum;
 }
 double sumUncashedChecks(vector<Check>& check_vector) {
-    long sum = 0;
+    double sum = 0;
     for (int i = 0; i < check_vector.size(); i++) {
         check_vector[i].recordCheckAmount();
         if (check_vector[i].getCashedStatus() == false) {
@@ -175,10 +182,10 @@ double sumDeposits(vector<Money>& deposit_vector) {
     }
     return sum;
 }
-double newCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks) {
+double calculatedBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks) {
     return old_balance + sum_deposits - (sum_cashed_checks  + sum_uncashed_checks);
 }
-double actualCalculatedAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks) {
+double bankAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks) {
     return old_balance + sum_deposits - sum_cashed_checks;
 }
 double accountBalanceDifference(double bank_balance, double calculated_balance) {
