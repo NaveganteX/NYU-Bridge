@@ -76,6 +76,7 @@ int main() {
     vector<Check> check_vector;
     vector<Money> deposit_vector;
 
+    end = 1;
     end_input = false;
     while (end_input == false) {
         cout << "Please enter the check number, check amount and "
@@ -89,9 +90,9 @@ int main() {
         cin.ignore();
         Check input_check(check_number, check_amount, cashed);
         check_vector.push_back(input_check);
-        cout << "Would you like to enter another check? (Yes: 1, No: -1)" << endl;
+        cout << "Would you like to enter another check? (Yes: 1, No: 0)" << endl;
         cin >> end;
-        if (end == -1) {
+        if (end == 0) {
             end_input = true;
         } else {
             end_input = false;
@@ -106,7 +107,7 @@ int main() {
     sum_uncashed_checks = sumUncashedChecks(check_vector);
     cout << "Sum of uncashed checks: $" << sum_uncashed_checks << endl;
 
-    end = 0;
+    end = 1;
     end_input = false;
     while (end_input == false) {
         cout << "Please enter a deposit amount" << endl;
@@ -115,10 +116,12 @@ int main() {
         deposit_amount *= 100;
         Money input_money(deposit_amount);
         deposit_vector.push_back(input_money);
-        cout << "Would you like to enter another deposit amount? (Yes: 1, No: -1)" << endl;
+        cout << "Would you like to enter another deposit amount? (Yes: 1, No: 0)" << endl;
         cin >> end;
-        if (end == -1) {
+        if (end == 0) {
             end_input = true;
+        } else {
+            end_input = false;
         }
         cin.ignore();
     }
@@ -132,15 +135,9 @@ int main() {
     old_account_balance *= 100;
     Money old_balance(old_account_balance);
 
-    double new_account_balance;
-    cout << "Please enter what your new account balance should be:" << endl;
-    cin >> new_account_balance;
-    new_account_balance *= 100;
-    Money new_balance(new_account_balance);
-
     double calculated_account_balance;
     calculated_account_balance = calculatedBalance(old_balance.getValue(), sum_deposits, sum_uncashed_checks, sum_cashed_checks);
-    cout << "Calculated Balance: $" << calculated_account_balance << endl;
+    cout << "New Calculated Balance: $" << calculated_account_balance << endl;
 
     double bank_balance;
     bank_balance = bankAccountBalance(old_balance.getValue(), sum_deposits, sum_cashed_checks);
@@ -324,3 +321,11 @@ double Money::getValue() const {
     return all_cents_double;
 }
 void Money::setValue(double amount) { this->all_cents = amount * 100; }
+
+
+//    double new_account_balance;
+//    cout << "Please enter what your new account balance should be:" << endl;
+//    cin >> new_account_balance;
+//    new_account_balance *= 100;
+//    Money new_balance(new_account_balance);
+//    cout << "new_balance: " << new_balance.getValue() << endl;
