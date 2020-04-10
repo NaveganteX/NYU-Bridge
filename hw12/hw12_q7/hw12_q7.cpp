@@ -68,6 +68,8 @@ double sumDeposits(vector<Money>& deposit_vector);
 double calculatedBalance(double old_balance, double sum_deposits, double sum_uncashed_checks, double sum_cashed_checks);
 double bankAccountBalance(double old_balance, double sum_deposits, double sum_cashed_checks);
 double accountBalanceDifference(double bank_balance, double calculated_balance);
+void listCashedChecks(vector<Check> cashed_check_vector);
+void listUncashedChecks(vector<Check> uncashed_check_vector);
 
 int main() {
     int end, check_number, check_cashed;
@@ -146,6 +148,10 @@ int main() {
     double balance_difference;
     balance_difference = accountBalanceDifference(calculated_account_balance, bank_balance);
     cout << "Balance Difference: $" << balance_difference << endl;
+
+    listCashedChecks(check_vector);
+    listUncashedChecks(check_vector);
+
     return 0;
 }
 
@@ -187,6 +193,26 @@ double bankAccountBalance(double old_balance, double sum_deposits, double sum_ca
 }
 double accountBalanceDifference(double bank_balance, double calculated_balance) {
     return calculated_balance - bank_balance;
+}
+
+void listCashedChecks(vector<Check> cashed_check_vector) {
+    cout << "Cashed Checks: ";
+    for (int i = 0; i < cashed_check_vector.size(); i++) {
+        if (cashed_check_vector[i].getCashedStatus() == true) {
+            cout << "$" << cashed_check_vector[i].getValue() << " ";
+        }
+    }
+    cout << endl;
+}
+
+void listUncashedChecks(vector<Check> uncashed_check_vector) {
+    cout << "Uncashed Checks: ";
+    for (int i = 0; i < uncashed_check_vector.size(); i++) {
+        if (uncashed_check_vector[i].getCashedStatus() == false) {
+            cout << "$" << uncashed_check_vector[i].getValue() << " ";
+        }
+    }
+    cout << endl;
 }
 
 Money operator +(const Money& amount1, const Money& amount2) {
