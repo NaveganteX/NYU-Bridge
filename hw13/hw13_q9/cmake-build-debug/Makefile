@@ -123,32 +123,32 @@ hw13_q9/fast:
 	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/build
 .PHONY : hw13_q9/fast
 
-hw13_q9.o: hw13_q9.cpp.o
+hw13.o: hw13.cpp.o
 
-.PHONY : hw13_q9.o
+.PHONY : hw13.o
 
 # target to build an object file
-hw13_q9.cpp.o:
-	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13_q9.cpp.o
-.PHONY : hw13_q9.cpp.o
+hw13.cpp.o:
+	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13.cpp.o
+.PHONY : hw13.cpp.o
 
-hw13_q9.i: hw13_q9.cpp.i
+hw13.i: hw13.cpp.i
 
-.PHONY : hw13_q9.i
+.PHONY : hw13.i
 
 # target to preprocess a source file
-hw13_q9.cpp.i:
-	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13_q9.cpp.i
-.PHONY : hw13_q9.cpp.i
+hw13.cpp.i:
+	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13.cpp.i
+.PHONY : hw13.cpp.i
 
-hw13_q9.s: hw13_q9.cpp.s
+hw13.s: hw13.cpp.s
 
-.PHONY : hw13_q9.s
+.PHONY : hw13.s
 
 # target to generate assembly for a file
-hw13_q9.cpp.s:
-	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13_q9.cpp.s
-.PHONY : hw13_q9.cpp.s
+hw13.cpp.s:
+	$(MAKE) -f CMakeFiles/hw13_q9.dir/build.make CMakeFiles/hw13_q9.dir/hw13.cpp.s
+.PHONY : hw13.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hw13_q9"
-	@echo "... hw13_q9.o"
-	@echo "... hw13_q9.i"
-	@echo "... hw13_q9.s"
+	@echo "... hw13.o"
+	@echo "... hw13.i"
+	@echo "... hw13.s"
 .PHONY : help
 
 

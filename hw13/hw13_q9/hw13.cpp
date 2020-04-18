@@ -1,3 +1,6 @@
+// Name: Lawrence Hon
+// NetID: lh3024
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -269,7 +272,6 @@ int main() {
 
 //    exit code 8 happens somewhere in this for loop; suspect a floating point exception
         for (int i = 0; i < doodlebug_vector.size(); i++) {
-
             doodlebug_vector[i].move(board_array, ant_vector);
         }
         for (int i = 0; i < ant_vector.size(); i++) {

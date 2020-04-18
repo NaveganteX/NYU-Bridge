@@ -3,4 +3,4 @@ project(hw13_q9)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hw13_q9 hw13_q9.cpp)
+add_executable(hw13_q9 hw13.cpp)
