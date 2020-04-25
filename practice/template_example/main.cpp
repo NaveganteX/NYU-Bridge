@@ -128,15 +128,74 @@ int find(const DynArray<T> &v, T toFind) { // linear search Theta(n)
 
 template <class T>
 void selectionSort(DynArray<T> &v) { // Theta(N^2)
-    for (int i = 0; i < v.size(); ++i) {
+    for (int i = 0; i < v.size(); i++) {
         int min_index = i;
-        for (int j = (i + 1) ; j < v.size(); ++j) {
+        for (int j = (i + 1) ; j < v.size(); j++) {
             if (v[j] < v[min_index]) {
                 min_index = j;
             }
         }
         mySwap(v[i], v[min_index]);
     }
+}
+
+template <class T>
+void insertionSort(DynArray<T> &v) {//Theta(N^2) even though the best case is Omega(N)
+    for (int i = 1; i < v.size(); i++) {
+        T val = v[i];
+        int j = i;
+        for (; (j < 0) && (v[j - 1] > val); j--) {
+            v[j] = v[j - 1];
+        }
+        v[j] = val;
+    }
+}
+
+template <class T>
+void merge(DynArray<T> &v, int left_position, int left_end, int right_end, DynArray<T> &temp) {
+    int original_start = left_position;
+    int right_position = left_end + 1;
+    int temp_position = left_position;
+
+    while ((left_position <= left_end) && (right_position <= right_end)) {
+        if (v[left_position] < v[right_position]) {
+            temp[temp_position++] = v[left_position++];
+        } else {
+            temp[temp_position++] = v[right_position++];
+        }
+    }
+
+    // the following two while loops copies the rest of one of the two "subarrays" onto the temp array
+    // only one of the two while loops will run
+    while (left_position <= left_end) {
+        temp[temp_position++] = v[left_position++];
+    }
+
+    while (right_position <= right_end) {
+        temp[right_position++] = v[right_position++];
+    }
+
+    // move temp, which now has the merged and values in sorted order, to the original array
+    for (int i = original_start; i <= right_end; i++) {
+        v[i] = temp[i];
+    }
+}
+
+template <class T>
+void mergeSort(DynArray<T> &v, int start, int end, DynArray<T> &temp) {//Theta(N*log(N))
+    if (start < end) {
+        int mid = (start + end) / 2;
+        mergeSort(v, start, mid, temp);
+        mergeSort(v, mid + 1, end, temp);
+        merge(v, start, mid, end, temp);
+    }
+}
+
+template <class T>
+void mergeSort(DynArray<T> &v) {
+    DynArray<T> temp;
+    temp.resize(v.size());
+    mergeSort(v, 0, v.size() - 1, temp);
 }
 
 template <class T>
@@ -163,8 +222,17 @@ int main() {
     srand(time(nullptr));
 
     DynArray<int> a;
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 10; i++) {
         a.push_back(rand() % 1000);
+    }
+
+    for (int j = 0; j < a.size(); ++j) {
+        cout << a[j] << " ";
+    }
+    cout << endl;
+    mergeSort(a);
+    for (int j = 0; j < a.size(); ++j) {
+        cout << a[j] << " ";
     }
 
     /*
@@ -181,14 +249,15 @@ int main() {
 
 //    We've effectively fully implemented the vector class with its templates!
     vector<int> int_vector; // vector is just a templated class!!!
-    DynArray<string> d; // we instantiate the DynArray class with the same notation as instantiating a vector
-    d.push_back("Lawrence");
-    d.push_back("Michael");
+//    DynArray<string> d; // we instantiate the DynArray class with the same notation as instantiating a vector
+//    d.push_back("Lawrence");
+//    d.push_back("Michael");
 
     DynArray<int> grades;
     grades.push_back(85);
     grades.push_back(100);
     grades.push_back(76);
+
 
     return 0;
 }
