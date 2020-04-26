@@ -1,0 +1,9 @@
+1	100	Alan Turing
+2	90	Grace Hopper
+3	35	Ada Lovelace
+4 	95  	Donald Knuth
+5 	50  	Margaret Hamilton
+6	63	Anita Borg
+7	34	E. M. Forster
+8	56	C. S. Lewis
+9	78	J. R. R. Tolkien
