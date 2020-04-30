@@ -9,7 +9,7 @@ class LList {
     LListNode<T> *head; // the only item stored in a LL class is a pointer to the first node in the list
     LListNode<T> *recursiveCopy(LListNode<T> *rhs);
     /*
-     * rhs is the right handside node; recursiveCopy not only copies rhs but
+     * rhs is the right hand side node; recursiveCopy not only copies rhs but
      * all subsequent right hand side nodes
      */
 public:
@@ -29,8 +29,10 @@ public:
     void clear();
     void insertAtEnd(T new_data);
     void insertAtPoint(LListNode<T> *ptr, T new_data);
+    T popFront();
     int size() const;
-    bool isEmpty() { return head->next == nullptr; }
+    bool isEmpty() {
+        return head == nullptr; }
 };
 
 template <class T>
@@ -72,6 +74,25 @@ void LList<T>::insertAtPoint(LListNode<T> *ptr, T new_data) {
 }
 
 template <class T>
+T LList<T>::removeFromHead() {
+    LListNode<T> *temp = head;
+    head = head->next;
+    return temp->data;
+}
+
+template <class T>
+T LList<T>::popFront() {
+    if (head->next == nullptr) //empty list!
+        return T(); //not sure what to do here?  User did something dumb.
+    T retval = head->next->data;
+    LListNode<T>* nodeToDelete = head->next;
+    head->next = nodeToDelete->next;
+    head->next = head;
+    delete nodeToDelete;
+    return retval;
+}
+
+template <class T>
 int LList<T>::size() const {
     int count = 0;
     LListNode<T> *temp = head;
@@ -80,6 +101,25 @@ int LList<T>::size() const {
         temp = temp->next;
     }
     return count;
+}
+
+template <class T>
+void LList<T>::clear() {
+    while (isEmpty()) {
+        popFront();
+    }
+}
+
+template <class T>
+LList<T>& LList<T>::operator=(const LList<T>& rhs) {
+    if (this == &rhs)
+        return *this;
+    clear();
+    LListNode<T>* ptr = rhs.head->next;
+    while (ptr != rhs.tail) {
+        push_back(ptr->data);
+    }
+    return *this;
 }
 
 template <class T>
@@ -99,11 +139,16 @@ public:
     // T new_data = T() creates a default
     explicit LListNode(T new_data = T(), LListNode<T> *new_next = nullptr) :
     data(new_data), next(new_next) {}
-
+    T getData() { return data; }
     friend class LList<T>;
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    LList<int> linked_list;
+    for (int i = 0; i < 10; ++i) {
+        linked_list.insertAtEnd(i);
+    }
+
+    while (linked_list)
     return 0;
 }
