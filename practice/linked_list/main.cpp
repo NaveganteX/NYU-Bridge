@@ -149,6 +149,6 @@ int main() {
         linked_list.insertAtEnd(i);
     }
 
-    while (linked_list)
+    while (linked_list) // how to traverse linked list?
     return 0;
 }
