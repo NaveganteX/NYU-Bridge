@@ -8,7 +8,10 @@ template <class T>
 class LList {
     LListNode<T> *head; // the only item stored in a LL class is a pointer to the first node in the list
     LListNode<T> *recursiveCopy(LListNode<T> *rhs);
-
+    /*
+     * rhs is the right handside node; recursiveCopy not only copies rhs but
+     * all subsequent right hand side nodes
+     */
 public:
     LList() : head(nullptr) {}
     // copy constructor
@@ -27,7 +30,18 @@ public:
     void insertAtEnd(T new_data);
     void insertAtPoint(LListNode<T> *ptr, T new_data);
     int size() const;
+    bool isEmpty() { return head->next == nullptr; }
 };
+
+template <class T>
+void LList<T>::insertAtHead(T new_data) {
+    // create new LListNode to rep data we want to insert at head
+    LListNode<T> *new_node = new LListNode<T>(new_data);
+    // point new_node's next ptr to head (the current first node)
+    new_node->next = head;
+    // point head node of list to node we just created (the new node we want to insert at head)
+    head = new_node;
+}
 
 template <class T>
 void LList<T>::insertAtEnd(T new_data) {
@@ -35,7 +49,6 @@ void LList<T>::insertAtEnd(T new_data) {
         insertAtHead(new_data);
         return;
     }
-
     // create a node with new_data
     LListNode<T> *temp = new LListNode<T>(new_data);
     // set end ptr to head of current LList (the pointer to the first node in the list)
@@ -50,6 +63,15 @@ void LList<T>::insertAtEnd(T new_data) {
 }
 
 template <class T>
+void LList<T>::insertAtPoint(LListNode<T> *ptr, T new_data) {
+    LListNode<T> *new_node = new LListNode<T>(new_data);
+    // have new node's next point to ptr's next
+    new_node->next = ptr->next;
+    // have previous node point to new_node;
+    ptr->next = new_node;
+}
+
+template <class T>
 int LList<T>::size() const {
     int count = 0;
     LListNode<T> *temp = head;
@@ -58,6 +80,14 @@ int LList<T>::size() const {
         temp = temp->next;
     }
     return count;
+}
+
+template <class T>
+LListNode<T>* LList<T>::recursiveCopy(LListNode<T> *rhs) {
+    if (rhs == nullptr) {
+        return nullptr;
+    }
+    return new LListNode<T>(rhs->data, recursiveCopy(rhs->next));
 }
 
 template <class T>
