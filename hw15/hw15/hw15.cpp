@@ -27,6 +27,7 @@ public:
     void insertAtEnd(T new_data);
     void insertAtPoint(LListNode<T> *ptr, T new_data);
     void updateHoursWorked(int employeeID, int hours_worked);
+    void sort();
 //    T popFront();
     int size() const;
     void printInfo() const;
@@ -106,10 +107,11 @@ void LList<T>::printInfo() const {
     int count = 0;
     LListNode<T> *temp = head;
     while (temp != nullptr) {
-        cout << "Employee ID: " << temp->data.getEmployeeID() << endl;
-        cout << "Employee Name: " << temp->data.getEmployeeName() << endl;
-        cout << "Employee Pay Rate: " << temp->data.getHourlyPayRate() << endl;
-        cout << "Employee Total Pay: " << temp->data.getTotalPay() << endl;
+        cout << temp->data.getEmployeeName() << ":" << endl;
+        cout << "ID: " << temp->data.getEmployeeID() << endl;
+        cout << "Pay Rate: " << temp->data.getHourlyPayRate() << endl;
+        cout << "Total Hours: " << temp->data.getHoursWorked() << endl;
+        cout << "Net Pay: " << temp->data.getTotalPay() << endl;
         cout << endl;
         temp = temp->next;
     }
@@ -124,6 +126,15 @@ void LList<T>::updateHoursWorked(int employeeID, int hours_worked) {
             return;
         }
         temp = temp->next;
+    }
+}
+
+template <class T>
+LList<T> LList<T>::sort() {
+    LList<T> *sorted_list = new LList<T>;
+    LListNode<T> *temp = head;
+    while (temp->next != nullptr) {
+        if (temp->data.getTotalPay())
     }
 }
 
@@ -205,8 +216,6 @@ void openInputFile(ifstream &inFile) {
 }
 
 int main() {
-    vector<Employee> employee_vector; // to be converted to linked list later
-
     ifstream employee_data_file;
     openInputFile(employee_data_file);
 
@@ -227,10 +236,8 @@ int main() {
     openInputFile(employee_payroll_file);
 
     int temp_hours_worked;
-    LListNode<Employee> *head_ptr = nullptr;
     while (employee_payroll_file >> temp_id) {
         employee_payroll_file >> temp_hours_worked;
-        // loop through linked list and find the employee with matching ID and assign temp_hours_worked
         employee_list.updateHoursWorked(temp_id, temp_hours_worked);
     }
         employee_list.printInfo();
@@ -239,10 +246,5 @@ int main() {
 }
 
 /*
- * 1. read in data
- * 2. take data and create Employee objects
- * 3. store objects in linked list
- *
- * 4. traverse the linked list
- *
+ * 1. create another linked list that is sorted
  */
