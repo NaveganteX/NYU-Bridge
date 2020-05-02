@@ -141,9 +141,8 @@ class Employee {
     double hourly_pay_rate;
 
 public:
-    Employee(string input_name, int input_id_num, double input_hourly_pay_rate) :
-        id_num(input_id_num), name(input_name), hourly_pay_rate(input_hourly_pay_rate) {}
-    Employee();
+    Employee(string input_name, int input_id_num, double input_hourly_pay_rate) : id_num(input_id_num), name(input_name), hourly_pay_rate(input_hourly_pay_rate) {}
+    Employee() = default;
 
     string getEmployeeName() { return name; }
     int getEmployeeID() { return id_num; }
@@ -190,58 +189,49 @@ void openInputFile(ifstream &inFile) {
     }
 }
 
-void merge(vector<Employee> &employee_vector, int left, int middle, int right) {
+void merge(vector<Employee> &employee_vector, vector<Employee> &temp, int left, int middle, int right) {
     vector<Employee> left_vector;
     vector<Employee> right_vector;
-    int left_position = middle - left + 1;
-    int right_position = right - middle;
+    int left_position = left;
+    int right_position = middle + 1;
+    int temp_pos = left;
 
-    for (int i = 0; i < left_position; i++) {
-        left_vector.push_back(employee_vector[left + i]);
-    }
-    for (int j = 0; j < right_position; j++) {
-        right_vector.push_back(employee_vector[middle + 1 + j]);
-    }
-
-    int i = 0, j = 0, k = left;
-
-    while ((i < left_position) && (j < right_position)) {
-        if (left_vector[i].getTotalPay() >= right_vector[i].getTotalPay()) {
-            employee_vector[k] = left_vector[i];
-            i++;
-        } else {
-            employee_vector[k] = right_vector[j];
-            j++;
-        }
-        k++;
+    while (left_position <= middle && right_position <= right){
+        if (employee_vector[left_position].getTotalPay() > employee_vector[right_position].getTotalPay())
+            temp[temp_pos++] = employee_vector[left_position++];
+        else
+            temp[temp_pos++] = employee_vector[right_position++];
     }
 
-    while (i < left_position) {
-        employee_vector[k] = left_vector[i];
-        i++;
-        k++;
+    while (left_position <= middle){
+        temp[temp_pos++] = employee_vector[left_position++];
+    }
+    while (right_position <= right) {
+        temp[temp_pos++] = employee_vector[right_position++];
     }
 
-    while (j < right_position) {
-        employee_vector[k] = right_vector[j];
-        j++;
-        k++;
+    for (int i = left; i <= right; i++) {
+        employee_vector[i] = temp[i];
     }
 }
 
-void mergeSort(vector<Employee> &employee_vector, int left, int right) {
+void mergeSort(vector<Employee> &employee_vector, vector<Employee> &temp, int left, int right) {
     if (left < right) {
         int middle =  (left + right) / 2;
-        mergeSort(employee_vector, left, middle);
-        mergeSort(employee_vector, middle + 1, right);
-        merge(employee_vector, left, middle, right);
+        mergeSort(employee_vector, temp, left, middle);
+        mergeSort(employee_vector, temp, middle + 1, right);
+        merge(employee_vector, temp, left, middle, right);
     }
 }
 
 void mergeSort(vector<Employee> &employee_vector) {
     int left = 0;
     int right = employee_vector.size();
-    mergeSort(employee_vector, left, right - 1);
+    Employee temp_employee;
+    vector<Employee> temp;
+    temp.push_back(temp_employee);
+    temp.resize(employee_vector.size());
+    mergeSort(employee_vector, temp, left, right);
 }
 
 int main() {
