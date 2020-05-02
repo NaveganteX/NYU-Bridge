@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 class LListNode;
 
-class Employee;
+//class Employee;
 
 template <class T>
 class LList {
@@ -18,7 +18,7 @@ public:
     LList() : head(nullptr) {}
     LList(const LList &rhs) : head(nullptr) { *this = rhs; }
     LList<T>& operator=(const LList<T> &rhs);
-//    ~LList() { clear(); }
+    ~LList() { clear(); }
 
     void insertAtHead(T new_data);
     T removeFromHead();
@@ -27,20 +27,16 @@ public:
     void insertAtEnd(T new_data);
     void insertAtPoint(LListNode<T> *ptr, T new_data);
     void updateHoursWorked(int employeeID, int hours_worked);
-    void sort();
-//    T popFront();
     int size() const;
+    vector<T> outputToVector();
     void printInfo() const;
     bool isEmpty() { return head == nullptr; }
 };
 
 template <class T>
 void LList<T>::insertAtHead(T new_data) {
-    // create new LListNode to rep data we want to insert at head
     LListNode<T> *new_node = new LListNode<T>(new_data);
-    // point new_node's next ptr to head (the current first node)
     new_node->next = head;
-    // point head node of list to node we just created (the new node we want to insert at head)
     head = new_node;
 }
 
@@ -50,25 +46,18 @@ void LList<T>::insertAtEnd(T new_data) {
         insertAtHead(new_data);
         return;
     }
-    // create a node with new_data
     LListNode<T> *temp = new LListNode<T>(new_data);
-    // set end ptr to head of current LList (the pointer to the first node in the list)
     LListNode<T> *end = head;
-
-    // while there is a node after the current node, assign the end ptr to the next node's next ptr
     while (end->next != nullptr) {
         end = end->next;
     }
-    // assign the lists' last node's next ptr to the new node we want to insert into the end
     end->next = temp;
 }
 
 template <class T>
 void LList<T>::insertAtPoint(LListNode<T> *ptr, T new_data) {
     LListNode<T> *new_node = new LListNode<T>(new_data);
-    // have new node's next point to ptr's next
     new_node->next = ptr->next;
-    // have previous node point to new_node;
     ptr->next = new_node;
 }
 
@@ -79,18 +68,6 @@ T LList<T>::removeFromHead() {
     return temp->data;
 }
 
-//template <class T>
-//T LList<T>::popFront() {
-//    if (head->next == nullptr)
-//        return T();
-//    T retval = head->next->data;
-//    LListNode<T>* nodeToDelete = head->next;
-//    head->next = nodeToDelete->next;
-//    head->next = head;
-//    delete nodeToDelete;
-//    return retval;
-//}
-
 template <class T>
 int LList<T>::size() const {
     int count = 0;
@@ -100,21 +77,6 @@ int LList<T>::size() const {
         temp = temp->next;
     }
     return count;
-}
-
-template <class T>
-void LList<T>::printInfo() const {
-    int count = 0;
-    LListNode<T> *temp = head;
-    while (temp != nullptr) {
-        cout << temp->data.getEmployeeName() << ":" << endl;
-        cout << "ID: " << temp->data.getEmployeeID() << endl;
-        cout << "Pay Rate: " << temp->data.getHourlyPayRate() << endl;
-        cout << "Total Hours: " << temp->data.getHoursWorked() << endl;
-        cout << "Net Pay: " << temp->data.getTotalPay() << endl;
-        cout << endl;
-        temp = temp->next;
-    }
 }
 
 template <class T>
@@ -130,20 +92,15 @@ void LList<T>::updateHoursWorked(int employeeID, int hours_worked) {
 }
 
 template <class T>
-LList<T> LList<T>::sort() {
-    LList<T> *sorted_list = new LList<T>;
+void LList<T>::clear() {
     LListNode<T> *temp = head;
-    while (temp->next != nullptr) {
-        if (temp->data.getTotalPay())
+    LListNode<T> *ptr = head;
+    while (ptr != nullptr) {
+        temp = ptr->next;
+        delete ptr;
+        ptr = temp;
     }
 }
-
-//template <class T>
-//void LList<T>::clear() {
-//    while (isEmpty()) {
-//        popFront();
-//    }
-//}
 
 template <class T>
 LList<T>& LList<T>::operator=(const LList<T>& rhs) {
@@ -186,7 +143,6 @@ class Employee {
 public:
     Employee(string input_name, int input_id_num, double input_hourly_pay_rate) :
         id_num(input_id_num), name(input_name), hourly_pay_rate(input_hourly_pay_rate) {}
-
     Employee();
 
     string getEmployeeName() { return name; }
@@ -197,8 +153,27 @@ public:
     double getTotalPay() {
         return hours_worked * hourly_pay_rate;
     }
-
 };
+
+void printInfo(vector<Employee> employee_vector) {
+    cout << endl;
+    cout << "******** Payroll Information *******" << endl;
+    for (int i = 0; i < employee_vector.size(); ++i) {
+        cout << employee_vector[i].getEmployeeName() << ", $" << employee_vector[i].getTotalPay() << endl;
+    }
+    cout << "*********** End Payroll ************" << endl;
+}
+
+template <class T>
+vector<T> LList<T>::outputToVector() {
+    LListNode<T> *head_ptr = head;
+    vector<T> output_vector;
+    while (head_ptr != nullptr) {
+        output_vector.push_back(head_ptr->data);
+        head_ptr = head_ptr->next;
+    }
+    return output_vector;
+}
 
 void openInputFile(ifstream &inFile) {
     string filename;
@@ -213,6 +188,60 @@ void openInputFile(ifstream &inFile) {
         inFile.clear();
         inFile.open(filename);
     }
+}
+
+void merge(vector<Employee> &employee_vector, int left, int middle, int right) {
+    vector<Employee> left_vector;
+    vector<Employee> right_vector;
+    int left_position = middle - left + 1;
+    int right_position = right - middle;
+
+    for (int i = 0; i < left_position; i++) {
+        left_vector.push_back(employee_vector[left + i]);
+    }
+    for (int j = 0; j < right_position; j++) {
+        right_vector.push_back(employee_vector[middle + 1 + j]);
+    }
+
+    int i = 0, j = 0, k = left;
+
+    while ((i < left_position) && (j < right_position)) {
+        if (left_vector[i].getTotalPay() >= right_vector[i].getTotalPay()) {
+            employee_vector[k] = left_vector[i];
+            i++;
+        } else {
+            employee_vector[k] = right_vector[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < left_position) {
+        employee_vector[k] = left_vector[i];
+        i++;
+        k++;
+    }
+
+    while (j < right_position) {
+        employee_vector[k] = right_vector[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(vector<Employee> &employee_vector, int left, int right) {
+    if (left < right) {
+        int middle =  (left + right) / 2;
+        mergeSort(employee_vector, left, middle);
+        mergeSort(employee_vector, middle + 1, right);
+        merge(employee_vector, left, middle, right);
+    }
+}
+
+void mergeSort(vector<Employee> &employee_vector) {
+    int left = 0;
+    int right = employee_vector.size();
+    mergeSort(employee_vector, left, right - 1);
 }
 
 int main() {
@@ -240,11 +269,10 @@ int main() {
         employee_payroll_file >> temp_hours_worked;
         employee_list.updateHoursWorked(temp_id, temp_hours_worked);
     }
-        employee_list.printInfo();
 
+    vector<Employee> employee_vector;
+    employee_vector = employee_list.outputToVector();
+    mergeSort(employee_vector);
+    printInfo(employee_vector);
     return 0;
 }
-
-/*
- * 1. create another linked list that is sorted
- */
