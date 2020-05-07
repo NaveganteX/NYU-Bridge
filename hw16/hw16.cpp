@@ -1,7 +1,8 @@
 #include <iostream>
-#include <list>
-#include <string>
 #include <fstream>
+#include <list>
+#include <vector>
+#include <string>
 using namespace std;
 
 void openInputFile(ifstream &inFile) {
@@ -31,29 +32,26 @@ public:
     void clear() { data.clear(); }
 };
 
-bool balanceSymbol() {
-    ifstream inFile;
-    openInputFile(inFile);
-
+bool balanceSymbol(ifstream &inFile) {
     Stack<char> stack;
-    char letter;
-    while (inFile >> letter) {
-        if ((letter == '{') || (letter == '(') || (letter == '[')) {
-            stack.push(letter);
+    char symbol;
+    while (inFile >> symbol) {
+        if ((symbol == '{') || (symbol == '(') || (symbol == '[')) {
+            stack.push(symbol);
         }
-        if ((letter == '}') || (letter == ')') || (letter == ']')) {
+        if ((symbol == '}') || (symbol == ')') || (symbol == ']')) {
             if (stack.isEmpty()) {
-                cout << "Code is not balanced, unpaired '" << letter  << "'"<< endl;
+                cout << "Code is not balanced, unpaired '" << symbol  << "'"<< endl;
                 return false;
             } else {
-                if ((letter == '}') && (stack.top() != '{')) {
-                    cout << "Code is not balanced, unpaired '" << letter  << "'"<< endl;
+                if ((symbol == '}') && (stack.top() != '{')) {
+                    cout << "Code is not balanced, unpaired '" << symbol  << "'"<< endl;
                     return false;
-                } else if ((letter == ')') && (stack.top() != '(')) {
-                    cout << "Code is not balanced, unpaired '" << letter  << "'"<< endl;
+                } else if ((symbol == ')') && (stack.top() != '(')) {
+                    cout << "Code is not balanced, unpaired '" << symbol  << "'"<< endl;
                     return false;
-                } else if ((letter == ']') && (stack.top() != '[')) {
-                    cout << "Code is not balanced, unpaired '" << letter  << "'"<< endl;
+                } else if ((symbol == ']') && (stack.top() != '[')) {
+                    cout << "Code is not balanced, unpaired '" << symbol  << "'"<< endl;
                     return false;
                 } else {
                     stack.pop();
@@ -71,8 +69,29 @@ bool balanceSymbol() {
     }
 }
 
+template <class T>
+class Queue {
+    vector<T> data_vector;
+    int front = 0;
+    int end = data_vector.size() - 1;
+public:
+    void enqueue(T new_item) { data_vector.push_back(new_item); }
+    T dequeue() {
+        T item = data_vector[front];
+        front += 1;
+        return item;
+    }
+    bool isEmpty() { return data_vector.empty(); }
+    int size() { return data_vector.size(); }
+    void clear() { return data_vector.clear(); }
+    int getFront() { return front; }
+    int getEnd() { return end; }
+};
+
 int main() {
-    cout << balanceSymbol();
+    ifstream inFile;
+    openInputFile(inFile);
+    cout << balanceSymbol(inFile);
 
     return 0;
 }

@@ -1,17 +1,48 @@
- BEGIN
-        (* Read *)
-        ReadArr(size, arr);
+program merge_sort;
 
-        (* Sort using bubble sort. *)
-        FOR i := size - 1 DOWNTO 1 DO
-            FOR j := 1 TO i DO 
-                IF arr[j] > arr[j + 1] THEN BEGIN
-                    tmp := arr[j];
-                    arr[j] := arr[j + 1];
-                    arr[j + 1] := tmp;
-                END;
+const
+    n = 10;
 
-        (* Print. *)
-        FOR i := 1 TO size DO
-            writeln(arr[i])
-    END.
+var
+    mas: array [1..n] of integer;
+    i: integer;
+
+procedure MergeSort(a, c: integer);
+var
+    x, j, i, n1, n2: integer;
+    rez: array[1..1000] of integer;
+begin
+    if c <= a then
+        exit
+    else
+    begin
+        x := (a + c) div 2;
+        MergeSort(a, x);
+        MergeSort(x + 1, c);
+        n1 := a;
+        n2 := x + 1;
+        for i := a to c do
+        begin
+            if (n1 < x + 1) and ((n2 > c) or (mas[n1] < mas[n2])) then
+            begin
+                rez[i] := mas[n1];
+                inc(n1);
+            end
+            else
+            begin
+                rez[i] :(=) mas[n2];
+                inc(n2);
+            end;
+        end;
+        for j := a to c do
+            mas[j] := rez[j];
+    end;
+end;
+
+begin
+    for i := 1 to n do
+        mas[i] := random(20);
+    writeln(mas);
+    MergeSort(1, n);
+    writeln(mas);
+end.
