@@ -80,32 +80,29 @@ public:
         front += 1;
         return item;
     }
+    T top() { return data_vector[front]; }
     bool isEmpty() { return data_vector.empty(); }
     int size() { return data_vector.size() - front; }
-    void clear() { return data_vector.clear(); }
-    int getFront() { return data_vector[front]; }
-    int getEnd() { return data_vector[data_vector.size() - 1]; }
+    void clear() {
+        front = 0;
+        data_vector.clear();
+    }
 };
 
 int main() {
-//    ifstream inFile;
-//    openInputFile(inFile);
-//    cout << balanceSymbol(inFile);
-
-    Queue<int> q;
-    for (int i = 1; i < 21; i++) {
-        q.enqueue(i);
-    }
-
-    cout << "getFront(): " << q.getFront() << endl;
-    cout << "getEnd(): " << q.getEnd() << endl;
-
-    int size = q.size();
-    for (int j = 0; j < size; ++j) {
-        cout << q.dequeue() << " ";
-    }
+    ifstream inFile;
+    openInputFile(inFile);
+    balanceSymbol(inFile);
 
     cout << endl;
-    cout << "isEmpty: " << q.isEmpty() << endl;
+
+    Queue<int> q;
+    for (int i = 0; i < 1000; ++i) {
+        q.enqueue(i);
+    }
+    for (int j = 0; j < 100; ++j) {
+        q.dequeue();
+    }
+
     return 0;
 }
