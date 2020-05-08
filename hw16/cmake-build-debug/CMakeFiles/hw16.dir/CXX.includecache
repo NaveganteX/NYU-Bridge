@@ -9,10 +9,12 @@
 /Users/lhon001/Development/NYU_Bridge/hw16/hw16.cpp
 iostream
 -
+fstream
+-
 list
 -
-string
+vector
 -
-fstream
+string
 -
 

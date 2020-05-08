@@ -73,7 +73,6 @@ template <class T>
 class Queue {
     vector<T> data_vector;
     int front = 0;
-    int end = data_vector.size() - 1;
 public:
     void enqueue(T new_item) { data_vector.push_back(new_item); }
     T dequeue() {
@@ -82,16 +81,31 @@ public:
         return item;
     }
     bool isEmpty() { return data_vector.empty(); }
-    int size() { return data_vector.size(); }
+    int size() { return data_vector.size() - front; }
     void clear() { return data_vector.clear(); }
-    int getFront() { return front; }
-    int getEnd() { return end; }
+    int getFront() { return data_vector[front]; }
+    int getEnd() { return data_vector[data_vector.size() - 1]; }
 };
 
 int main() {
-    ifstream inFile;
-    openInputFile(inFile);
-    cout << balanceSymbol(inFile);
+//    ifstream inFile;
+//    openInputFile(inFile);
+//    cout << balanceSymbol(inFile);
 
+    Queue<int> q;
+    for (int i = 1; i < 21; i++) {
+        q.enqueue(i);
+    }
+
+    cout << "getFront(): " << q.getFront() << endl;
+    cout << "getEnd(): " << q.getEnd() << endl;
+
+    int size = q.size();
+    for (int j = 0; j < size; ++j) {
+        cout << q.dequeue() << " ";
+    }
+
+    cout << endl;
+    cout << "isEmpty: " << q.isEmpty() << endl;
     return 0;
 }
