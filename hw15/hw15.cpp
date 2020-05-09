@@ -247,6 +247,7 @@ int main() {
         employee_data_file >> temp_hourly_rate;
         employee_data_file.ignore(9999, '\t');
         getline(employee_data_file, temp_name);
+        cout << "name: " << temp_name << endl;
         Employee temp_employee(temp_name, temp_id, temp_hourly_rate);
         employee_list.insertAtEnd(temp_employee);
     }
