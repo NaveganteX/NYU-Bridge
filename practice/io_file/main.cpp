@@ -4,6 +4,11 @@
 #include <vector>
 using namespace std;
 
+/*
+ * in C++, we have to create objects to represent a connection to a file.
+ * These objects are of type ifstream and ofstream
+ */
+
 // openInputFile includes logic to check that opening file was successful
 void openInputFile(ifstream &inFile) {
     string filename;
@@ -37,11 +42,18 @@ struct Student {
 };
 
 int main() {
-    // ofstream outFile("outFile.txt"); does same as next two lines in one line; o need for ".open"
+    // ofstream outFile("outFile.txt"); does same as next two lines in one line; no need for ".open"
     ofstream outFile;
     outFile.open("outFile.txt", ios::app); //ios::app appends input to end of outFile.txt instead of overwriting
-    // writes "Hello, World!" to outFile
+    // if the file passed into .open() already exists, it will open AND overwrite what's in the file
+    // if the file does not exist, it will create and open it
+    // writes "Hello, World!" to outFile so instead of writing (printing) to the screen like "cout <<"
+    // outFile << will write (or print) to the file. (it takes some insignificant amount of time for the computer to write to file)
     outFile << "Hello, World!" << endl;
+    // close() closes connection between object and the stream and "flushes" whatever is in the buffer and writes it to the files
+    // close() is called by ofstream destructor automatically when the function falls out of scope (i.e. when function ends) so you don't
+    // need to explicitly call it
+    outFile.close();
 
     ifstream inFile;
     openInputFile(inFile);

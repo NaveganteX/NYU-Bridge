@@ -36,6 +36,5 @@ int main() {
     cout << two.getValue() << endl;
 
 
-
     return 0;
 }

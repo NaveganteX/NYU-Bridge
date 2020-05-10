@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/lhon001/Development/NYU Bridge/practice/minMax/minMax.cpp" "/Users/lhon001/Development/NYU Bridge/practice/minMax/cmake-build-debug/CMakeFiles/minMax.dir/minMax.cpp.o"
+  "/Users/lhon001/Development/NYU_Bridge/practice/minMax/minMax.cpp" "/Users/lhon001/Development/NYU_Bridge/practice/minMax/cmake-build-debug/CMakeFiles/minMax.dir/minMax.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

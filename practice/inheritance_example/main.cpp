@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>;
 using namespace std;
 
 // Pet is the base class
@@ -17,12 +18,15 @@ public:
     virtual void speak() const {
         cout << "bleat(?)" << endl;
     }
+
+    int getPetID() { return petID; }
 };
 
 // Cat :public Pet line indicates Cat is a derived class of Pet class
 class Cat :public Pet {
     double whiskerLength;
     int age;
+    string color;
 
 public:
     /*
@@ -47,27 +51,47 @@ public:
         Pet::setName(newName);
     }
 
-    Cat& operator = (const Pet&);
+    string getColor() {
+        return this->color;
+    }
+
+//return by reference (Cat& getColor()...) whenever the thing we are returning existed before the function
+//when we return a temp variable created inside the function, we CANNOT the function cannot return by reference
+    Cat& setColor(string colorInput) {
+        color = colorInput;
+        return *this;
+    }
 };
 
 int main() {
     Cat simba;
     simba.setName("Simba");
-    cout << simba.getName() << endl;
-    cout << simba.getLength() << endl;
+    simba.setColor("ginger");
+//    cout << simba.getName() << endl;
+//    cout << simba.getLength() << endl;
 
-    simba.setLength(23);
-    cout << simba.getLength() << endl;
-    simba.speak();
+//    simba.setLength(23);
+//    cout << simba.getLength() << endl;
+//    simba.speak();
+//
+//    Pet doge;
+//    doge.setName("Pluto");
+//    cout << doge.getName() << endl;
+//    doge.speak();
+//
+//    simba.setAge(56);
+//    cout << simba.getAge() << endl;
+//
+//    cout << simba.getPetID() << endl;
+//    Pet rock;
+//    rock.setName("Rocko");
+//    cout << rock.getName() << endl;
+//    cout << rock.getPetID() << endl;
 
-    Pet doge;
-    doge.setName("Pluto");
-    cout << doge.getName() << endl;
-    doge.speak();
-
-    simba.setAge(56);
-    cout << simba.getAge() << endl;
-
+    Cat *catPtr = &simba;
+    cout << catPtr->getName() << endl; //"Simba"
+    cout << (*catPtr).getName() << endl; //"Simba"
+    cout << simba.getColor() << endl;
 
     return 0;
 }

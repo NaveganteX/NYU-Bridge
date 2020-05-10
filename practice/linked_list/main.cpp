@@ -31,8 +31,7 @@ public:
     void insertAtPoint(LListNode<T> *ptr, T new_data);
     T popFront();
     int size() const;
-    bool isEmpty() {
-        return head == nullptr; }
+    bool isEmpty() { return head == nullptr; }
 };
 
 template <class T>
@@ -98,6 +97,7 @@ int LList<T>::size() const {
     LListNode<T> *temp = head;
     while (temp != nullptr) {
         count++;
+        cout << temp->getData() << " ";
         temp = temp->next;
     }
     return count;
@@ -146,9 +146,10 @@ public:
 int main() {
     LList<int> linked_list;
     for (int i = 0; i < 10; ++i) {
-        linked_list.insertAtEnd(i);
+        LListNode<int> temp_node(i);
+        linked_list.insertAtEnd(temp_node);
     }
 
-    while (linked_list) // how to traverse linked list?
+    linked_list.size();
     return 0;
 }

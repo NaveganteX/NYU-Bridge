@@ -8,7 +8,7 @@ class Stack {
 
 public:
     void push(T new_item) { data.push_front(new_item); }
-    T pop() { return data.pop_front(); }
+    T pop() { return data.pop_front(); } // stl::list::pop_front() does not have a return value so should be void...
     T top() { return *data.begin(); }
     bool isEmpty() const { return data.size() == 0; }
     int size() const{ return data.size(); }

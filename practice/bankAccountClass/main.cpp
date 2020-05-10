@@ -16,22 +16,14 @@ private:
 
 public:
     BankAccount(string starting_Name, double starting_balance)
-    : account_Owner_Name(starting_Name), balance(starting_balance), bank_Account_Number(generate_Account_Number()){}
+    : account_Owner_Name(starting_Name), balance(starting_balance), bank_Account_Number(generate_Account_Number()) {}
 
-    string get_Owner_Name() const { return account_Owner_Name; }
-    void set_Owner_Name(string new_Name) { account_Owner_Name = new_Name; }
-
-    double get_Balance() const { return balance; }
-    void set_Deposit(double deposit_Amount) { balance += deposit_Amount; }
-    void set_Withdrawal(double withdrawal_Amount) {
-        if (balance < withdrawal_Amount) {
-            cout << "Unfortunately you do not have enough in your account." << endl;
-        } else {
-            balance -= withdrawal_Amount;
-        }
-    }
-
-    int get_Account_Number() const { return bank_Account_Number; }
+    string get_Owner_Name();
+    void set_Owner_Name(string new_Name);
+    double get_Balance();
+    void set_Deposit(double deposit_Amount);
+    void set_Withdrawal(double withdrawal_Amount);
+    int get_Account_Number();
 };
 
 int main() {
@@ -46,7 +38,22 @@ int main() {
     cout << "Account Balance: $" << bank_Account_Lawrence.get_Balance() << endl;
 
     bank_Account_Lawrence.set_Withdrawal(988.74);
-    cout << "New Balance: $" << bank_Account_Lawrence.get_Balance() << endl;
 
     return 0;
 }
+
+string BankAccount::get_Owner_Name() { return account_Owner_Name; }
+void BankAccount::set_Owner_Name(string new_Name) { account_Owner_Name = new_Name; }
+double BankAccount::get_Balance() { return balance; }
+void BankAccount::set_Deposit(double deposit_Amount) { balance += deposit_Amount; }
+void BankAccount::set_Withdrawal(double withdrawal_Amount) {
+    if (balance < withdrawal_Amount) {
+        cout << "Unfortunately you do not have enough in your account." << endl;
+        cout << "Current Balance: $" << BankAccount::get_Balance() << endl;
+    } else {
+        cout << "Withdrawn amount: -$" << withdrawal_Amount << endl;
+        balance -= withdrawal_Amount;
+        cout << "New Balance: $" << BankAccount::get_Balance() << endl;
+    }
+}
+int BankAccount::get_Account_Number() { return bank_Account_Number; }
