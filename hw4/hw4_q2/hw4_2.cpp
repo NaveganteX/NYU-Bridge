@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int input, number, m, d, c, l, x, v, i;
+    int input = 0 , number = 0, m = 0, d = 0, c = 0, l = 0, x = 0, v = 0, i = 0;
     string roman;
 
     cout << "Enter decimal number:" << endl;

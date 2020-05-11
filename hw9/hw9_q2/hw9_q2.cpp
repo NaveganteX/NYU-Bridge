@@ -52,6 +52,5 @@ int numberOfLetters(char letter, string text) {
             letterCount++;
         }
     }
-//    cout << "letterCount: " << letterCount << endl;
     return letterCount;
 }

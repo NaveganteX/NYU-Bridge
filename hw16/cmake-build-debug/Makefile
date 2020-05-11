@@ -123,32 +123,59 @@ hw16/fast:
 	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/build
 .PHONY : hw16/fast
 
-hw16.o: hw16.cpp.o
+lh3024_hw16_pascal.o: lh3024_hw16_pascal.cpp.o
 
-.PHONY : hw16.o
+.PHONY : lh3024_hw16_pascal.o
 
 # target to build an object file
-hw16.cpp.o:
-	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/hw16.cpp.o
-.PHONY : hw16.cpp.o
+lh3024_hw16_pascal.cpp.o:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o
+.PHONY : lh3024_hw16_pascal.cpp.o
 
-hw16.i: hw16.cpp.i
+lh3024_hw16_pascal.i: lh3024_hw16_pascal.cpp.i
 
-.PHONY : hw16.i
+.PHONY : lh3024_hw16_pascal.i
 
 # target to preprocess a source file
-hw16.cpp.i:
-	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/hw16.cpp.i
-.PHONY : hw16.cpp.i
+lh3024_hw16_pascal.cpp.i:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.i
+.PHONY : lh3024_hw16_pascal.cpp.i
 
-hw16.s: hw16.cpp.s
+lh3024_hw16_pascal.s: lh3024_hw16_pascal.cpp.s
 
-.PHONY : hw16.s
+.PHONY : lh3024_hw16_pascal.s
 
 # target to generate assembly for a file
-hw16.cpp.s:
-	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/hw16.cpp.s
-.PHONY : hw16.cpp.s
+lh3024_hw16_pascal.cpp.s:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.s
+.PHONY : lh3024_hw16_pascal.cpp.s
+
+lh3024_hw16_vector_queue.o: lh3024_hw16_vector_queue.cpp.o
+
+.PHONY : lh3024_hw16_vector_queue.o
+
+# target to build an object file
+lh3024_hw16_vector_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o
+.PHONY : lh3024_hw16_vector_queue.cpp.o
+
+lh3024_hw16_vector_queue.i: lh3024_hw16_vector_queue.cpp.i
+
+.PHONY : lh3024_hw16_vector_queue.i
+
+# target to preprocess a source file
+lh3024_hw16_vector_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.i
+.PHONY : lh3024_hw16_vector_queue.cpp.i
+
+lh3024_hw16_vector_queue.s: lh3024_hw16_vector_queue.cpp.s
+
+.PHONY : lh3024_hw16_vector_queue.s
+
+# target to generate assembly for a file
+lh3024_hw16_vector_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/hw16.dir/build.make CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.s
+.PHONY : lh3024_hw16_vector_queue.cpp.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hw16"
-	@echo "... hw16.o"
-	@echo "... hw16.i"
-	@echo "... hw16.s"
+	@echo "... lh3024_hw16_pascal.o"
+	@echo "... lh3024_hw16_pascal.i"
+	@echo "... lh3024_hw16_pascal.s"
+	@echo "... lh3024_hw16_vector_queue.o"
+	@echo "... lh3024_hw16_vector_queue.i"
+	@echo "... lh3024_hw16_vector_queue.s"
 .PHONY : help
 
 

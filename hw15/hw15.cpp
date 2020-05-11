@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 class LListNode;
 
-//class Employee;
+class Employee;
 
 template <class T>
 class LList {
@@ -265,5 +265,7 @@ int main() {
     employee_vector = employee_list.outputToVector();
     mergeSort(employee_vector);
     printInfo(employee_vector);
+
+    employee_list.clear();
     return 0;
 }

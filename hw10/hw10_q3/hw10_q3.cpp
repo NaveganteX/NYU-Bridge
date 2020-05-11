@@ -96,7 +96,7 @@ void numSearchV1(int array[], int arrayLogicalSize, int &outNumFoundArrayLogical
         if (i != outNumFoundArrayLogicalSize - 1) {
             cout << numFoundArray[i] << ", ";
         } else {
-            cout << numFoundArray[i] << endl;
+            cout << numFoundArray[i] << "." << endl;
         }
     }
 }

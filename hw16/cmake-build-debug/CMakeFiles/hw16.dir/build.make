@@ -57,30 +57,45 @@ include CMakeFiles/hw16.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hw16.dir/flags.make
 
-CMakeFiles/hw16.dir/hw16.cpp.o: CMakeFiles/hw16.dir/flags.make
-CMakeFiles/hw16.dir/hw16.cpp.o: ../hw16.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lhon001/Development/NYU_Bridge/hw16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw16.dir/hw16.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw16.dir/hw16.cpp.o -c /Users/lhon001/Development/NYU_Bridge/hw16/hw16.cpp
+CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o: CMakeFiles/hw16.dir/flags.make
+CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o: ../lh3024_hw16_pascal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lhon001/Development/NYU_Bridge/hw16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o -c /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_pascal.cpp
 
-CMakeFiles/hw16.dir/hw16.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw16.dir/hw16.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lhon001/Development/NYU_Bridge/hw16/hw16.cpp > CMakeFiles/hw16.dir/hw16.cpp.i
+CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_pascal.cpp > CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.i
 
-CMakeFiles/hw16.dir/hw16.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw16.dir/hw16.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lhon001/Development/NYU_Bridge/hw16/hw16.cpp -o CMakeFiles/hw16.dir/hw16.cpp.s
+CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_pascal.cpp -o CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.s
+
+CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o: CMakeFiles/hw16.dir/flags.make
+CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o: ../lh3024_hw16_vector_queue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lhon001/Development/NYU_Bridge/hw16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o -c /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_vector_queue.cpp
+
+CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_vector_queue.cpp > CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.i
+
+CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_vector_queue.cpp -o CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.s
 
 # Object files for target hw16
 hw16_OBJECTS = \
-"CMakeFiles/hw16.dir/hw16.cpp.o"
+"CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o" \
+"CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o"
 
 # External object files for target hw16
 hw16_EXTERNAL_OBJECTS =
 
-hw16: CMakeFiles/hw16.dir/hw16.cpp.o
+hw16: CMakeFiles/hw16.dir/lh3024_hw16_pascal.cpp.o
+hw16: CMakeFiles/hw16.dir/lh3024_hw16_vector_queue.cpp.o
 hw16: CMakeFiles/hw16.dir/build.make
 hw16: CMakeFiles/hw16.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lhon001/Development/NYU_Bridge/hw16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hw16"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lhon001/Development/NYU_Bridge/hw16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hw16"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw16.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,3 +1,0 @@
-/Users/lhon001/Development/NYU_Bridge/search_sort/search/search/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/lhon001/Development/NYU_Bridge/search_sort/search/search/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/lhon001/Development/NYU_Bridge/search_sort/search/search/cmake-build-debug/CMakeFiles/search.dir

@@ -104,6 +104,12 @@ int main() {
     old_account_balance *= 100;
     Money old_balance(old_account_balance);
 
+    double balance_from_bank;
+    cout << "Please enter your new account balance:" << endl;
+    cin >> balance_from_bank;
+    balance_from_bank *= 100;
+    Money new_balance(balance_from_bank);
+
     cout << endl;
     cout << "Checkbook Summary:" << endl;
     cout << "------------------" << endl;

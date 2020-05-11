@@ -21,8 +21,9 @@ int main() {
     cout << endl;
 
     cout << "getPosNums2:" << endl;
-    int arrTwo[] = {16, -1, 3, 0, 6, 4};
-    int arrTwoSize = 6;
+//    int arrTwo[] = {16, -1, 3, 0, 6, 4};
+    int arrTwo[] = {5, -2, -1, 0, 1, 2, 3, -4, 5, 6};
+    int arrTwoSize = 10;
     int *outPosArrTwo = new int[arrTwoSize];
     int outPosArrTwoSize = 0;
     getPosNums2(arrTwo, arrTwoSize, *&outPosArrTwo, outPosArrTwoSize);

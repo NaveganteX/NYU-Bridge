@@ -6,12 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/Users/lhon001/Development/NYU_Bridge/hw16/hw16.cpp
+/Users/lhon001/Development/NYU_Bridge/hw16/lh3024_hw16_vector_queue.cpp
 iostream
--
-fstream
--
-list
 -
 vector
 -
