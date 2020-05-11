@@ -102,23 +102,31 @@ void BST<T>::printLevelOrder(BSTNode<T> *node) {
     }
 }
 
+/* 
+insert() finds the 
+ */
+
 template <class T> 
 void BST<T>::insert(T item) {
     if (root == nullptr) {
         root = new BSTNode<T>(item);
         return;
     }
+
     BSTNode<T> *temp = root;
     BSTNode<T> *prev = root;
-    while (temp != nullptr) {
+
+    while (temp != nullptr) { // if you have not reached end then set prev to current temp
         prev = temp;
-        if (item < temp->data) { // t
+        if (item < temp->data) { // advance temp depending on the value of left/right node
             temp = temp->left;
         } else {
             temp = temp->right;
         }
     }
-    if (item < prev->data) {
+
+    // when temp ptr is null (when above while loop cond is false), then prev == the last node
+    if (item < prev->data) { // determine which child node to insert into
         prev->left = new BSTNode<T>(item, prev);
     } else {
         prev->right = new BSTNode<T>(item, prev);
