@@ -37,12 +37,14 @@ int BSTNode<T>::getSize() const {
 
 template <class T>
 class BST {
+    BSTNode<T> *root;
 public:
     void printInOrder(BSTNode<T> *node);
     void printPreOrder(BSTNode<T> *node);
     void printPostOrder(BSTNode<T> *node);
     void printLevelOrder(BSTNode<T> *node);
     void insert(T item);
+    void remove(BSTNode<T> *&temp);
 };
 
 /*
@@ -87,7 +89,7 @@ are processed AFTER the right child node.
  */
 template <class T>
 void BST<T>::printLevelOrder(BSTNode<T> *node) {
-    queue<BSTNode<T>> *q;
+    queue< BSTNode<T> > q;
     q.push(node);
     while (!q.empty()) {
         BSTNode<T> *temp = q.front(); // assign a temp ptr to the first node in the queue
@@ -103,9 +105,8 @@ void BST<T>::printLevelOrder(BSTNode<T> *node) {
 }
 
 /* 
-insert() finds the 
+insert() finds the last node and assigns the item to the po
  */
-
 template <class T> 
 void BST<T>::insert(T item) {
     if (root == nullptr) {
@@ -130,6 +131,65 @@ void BST<T>::insert(T item) {
         prev->left = new BSTNode<T>(item, prev);
     } else {
         prev->right = new BSTNode<T>(item, prev);
+    }
+}
+
+template <class T>
+void BST<T>::remove(BSTNode<T> *&temp) {
+    // no children node
+    BSTNode<T> *parent = temp->prev;
+    if (temp->left == nullptr && temp->right == nullptr) {
+    // will need to determine if this the root, left of right of parent
+        if (parent == nullptr) { // last node on the tree
+            root = nullptr;
+        }
+        else if (parent->left == temp) {
+            parent->left == nullptr;
+        }
+        else {
+            parent->right = nullptr;
+        }
+        delete temp;
+    }
+    // one child - in each case we are promoting the value of the left/right child up and deleting the now empty 
+    // child node. This has the effect of deleting the node we want
+    else if (temp->left == nullptr) { // there is a right child but no left
+        // promote temp->right
+        BSTNode<T> *toDelete = temp->right;
+        temp->data = toDelete->data;
+        temp->left = toDelete->left;
+        if (temp->left != nullptr) {
+            temp->left->parent = temp;
+        }
+        temp->right = toDelete->right;
+        if (temp->right != nullptr) {
+            temp->right->parent = temp;
+        }
+        delete toDelete;
+    }
+
+    else if (temp->right == nullptr) { // there is a left but no right
+        // promote the value of the left child up
+        BSTNode<T> *toDelete = temp->left;
+        temp->data = toDelete->data; // assign value of child to the node you want to delete
+        temp->left = toDelete->left;
+        if (temp->left != nullptr) {
+            temp->left->parent = temp;
+        }
+        temp->right = toDelete->right;
+        if (temp->right != nullptr) {
+            temp->right->parent = temp;
+        }
+        delete toDelete;
+    }
+    // two child nodes - arbitrarily pick the left or right branch and go
+    else {
+        BSTNode<T> *min_of_right = temp->right;
+        while (min_of_right->left != nullptr) {
+            min_of_right = min_of_right->left;
+        }
+        temp->data = min_of_right->data;
+        remove(min_of_right);
     }
 }
 
