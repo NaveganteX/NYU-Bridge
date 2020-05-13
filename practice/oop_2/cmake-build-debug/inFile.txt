@@ -1,0 +1,9 @@
+1	100.11	Alan Turing
+2	93.56	Grace Hopper
+3	35.56	Ada Lovelace
+8 	1.00 	J.R.R. Tolkien
+7	115.19	Elon R. Musk
+4 	95.99  	Donald Knuth
+5 	50.23  	Margaret Hamilton the III
+6	63.02	Anita Borg
+9   2.00   	Jeff Bezos

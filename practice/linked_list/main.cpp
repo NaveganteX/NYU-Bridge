@@ -146,8 +146,7 @@ public:
 int main() {
     LList<int> linked_list;
     for (int i = 0; i < 10; ++i) {
-        LListNode<int> temp_node(i);
-        linked_list.insertAtEnd(temp_node);
+        linked_list.insertAtEnd(i);
     }
 
     linked_list.size();

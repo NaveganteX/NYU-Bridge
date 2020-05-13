@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,7 +8,7 @@ using namespace std;
 template <class T>
 class LListNode;
 
-class Employee;
+//class Employee;
 
 template <class T>
 class LList {
@@ -245,9 +246,8 @@ int main() {
     LList<Employee> employee_list;
     while (employee_data_file >> temp_id) {
         employee_data_file >> temp_hourly_rate;
-        employee_data_file.ignore(9999, '\t');
+        employee_data_file.ignore(9999, ' ');
         getline(employee_data_file, temp_name);
-        cout << "name: " << temp_name << endl;
         Employee temp_employee(temp_name, temp_id, temp_hourly_rate);
         employee_list.insertAtEnd(temp_employee);
     }
@@ -265,7 +265,5 @@ int main() {
     employee_vector = employee_list.outputToVector();
     mergeSort(employee_vector);
     printInfo(employee_vector);
-
-    employee_list.clear();
     return 0;
 }

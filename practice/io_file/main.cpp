@@ -14,7 +14,7 @@ void openInputFile(ifstream &inFile) {
     string filename;
     cout << "What filename would you like to open?" << endl;
     cin >> filename;
-    // opens the file named "filename"
+    // opens the file named "filename"; "connects" the filename to the ifstream object
     inFile.open(filename);
 
     // while loop verifies that the file did in fact open;

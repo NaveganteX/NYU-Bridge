@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="lh3024_q5" targetName="lh3024_q5" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf312c5f-6525-425d-9ce5-e05039bb5de5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../hw11_q3/.idea/hw11_q3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam_1/q11/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam_1/q11/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw10/hw10_q3/cmake-build-debug/CMakeFiles/hw10_q3.dir/hw10_q3.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw10/hw10_q3/cmake-build-debug/CMakeFiles/hw10_q3.dir/hw10_q3.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw10/hw10_q3/cmake-build-debug/hw10_q3" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw10/hw10_q3/cmake-build-debug/hw10_q3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw10/hw10_q3/hw10_q3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw10/hw10_q3/hw10_q3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw4/hw4_q2/cmake-build-debug/CMakeFiles/hw4_q2.dir/hw4_2.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw4/hw4_q2/cmake-build-debug/CMakeFiles/hw4_q2.dir/hw4_2.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw4/hw4_q2/cmake-build-debug/hw4_q2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw4/hw4_q2/cmake-build-debug/hw4_q2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw4/hw4_q2/hw4_2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw4/hw4_q2/hw4_2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q1/cmake-build-debug/CMakeFiles/hw6_q1.dir/hw6_q1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q1/cmake-build-debug/CMakeFiles/hw6_q1.dir/hw6_q1.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q1/cmake-build-debug/hw6_q1" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q1/cmake-build-debug/hw6_q1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q2/cmake-build-debug/CMakeFiles/hw6_q2.dir/hw6_q2.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q2/cmake-build-debug/CMakeFiles/hw6_q2.dir/hw6_q2.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q2/cmake-build-debug/hw6_q2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q2/cmake-build-debug/hw6_q2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q2/hw6_q2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q2/hw6_q2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw6/hw6_q4/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw6/hw6_q4/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/CMakeFiles/hw7_q1.dir/hw7_q1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/CMakeFiles/hw7_q1.dir/hw7_q1.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/hw7_q1" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw7/hw7_q1/cmake-build-debug/hw7_q1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/CMakeFiles/hw8_q2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/CMakeFiles/hw8_q2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/CMakeFiles/hw8_q2.dir/hw8_q2.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/CMakeFiles/hw8_q2.dir/hw8_q2.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/hw8_q2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q2/cmake-build-debug/hw8_q2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/CMakeFiles/hw8_q3.dir/hw8_q3.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/CMakeFiles/hw8_q3.dir/hw8_q3.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/hw8_q3" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q3/cmake-build-debug/hw8_q3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q3/hw8_q3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q3/hw8_q3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/CMakeFiles/hw8_q4.dir/hw8_q4.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/CMakeFiles/hw8_q4.dir/hw8_q4.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/hw8_q4" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q4/cmake-build-debug/hw8_q4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q4/hw8_q4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q4/hw8_q4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/CMakeFiles/hw8_q5.dir/hw8_q5.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/CMakeFiles/hw8_q5.dir/hw8_q5.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/hw8_q5" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q5/cmake-build-debug/hw8_q5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw8/hw8_q5/hw8_q5.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw8/hw8_q5/hw8_q5.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/hw9_q1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/CMakeFiles/hw9_q1.dir/hw9_q1.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/hw9_q1" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/hw9_q1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/hw9_q1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q1/cmake-build-debug/hw9_q1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/hw9_q2.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/hw9_q2.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/hw9_q2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/hw9_q2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/CMakeFiles/hw9_q2.dir/hw9_q2.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/hw9_q2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q2/cmake-build-debug/hw9_q2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q2/hw9_q2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q2/hw9_q2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/CMakeFiles/hw9_q3.dir/hw9_q3.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/hw9_q3" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/hw9_q3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/hw9_q3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q3/cmake-build-debug/hw9_q3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q4/cmake-build-debug/CMakeFiles/hw9_q4.dir/hw9_q4.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q4/cmake-build-debug/CMakeFiles/hw9_q4.dir/hw9_q4.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q4/cmake-build-debug/hw9_q4" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q4/cmake-build-debug/hw9_q4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw9/hw9_q4/hw9_q4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw9/hw9_q4/hw9_q4.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZgaqfqrzNHKLfRDpkGssylS0Us" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="lh3024_q5" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lh3024_q5" TARGET_NAME="lh3024_q5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lh3024_q5" RUN_TARGET_NAME="lh3024_q5">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf312c5f-6525-425d-9ce5-e05039bb5de5" name="Default Changelist" comment="" />
+      <created>1585263382304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585263382304</updated>
+      <workItem from="1585263384548" duration="3792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="428" height="750" key="GridCell.Tab.0.bottom" timestamp="1585270253373">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="428" height="750" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1585270253373" />
+    <state width="428" height="750" key="GridCell.Tab.0.center" timestamp="1585270253371">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="428" height="750" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1585270253371" />
+    <state width="428" height="750" key="GridCell.Tab.0.left" timestamp="1585270253371">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="428" height="750" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1585270253371" />
+    <state width="428" height="750" key="GridCell.Tab.0.right" timestamp="1585270253372">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="428" height="750" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1585270253372" />
+  </component>
+</project>
