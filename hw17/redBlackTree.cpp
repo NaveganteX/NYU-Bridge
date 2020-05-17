@@ -302,48 +302,49 @@ RedBlackNode<T>* RedBlackTree<T>::find(const T& toFind) const{
  */
 template <class T>
 void RedBlackTree<T>::insert(const T& toInsert, RedBlackNode<T>*& point){
-    cout << "1. inserting: " << toInsert << endl;
     if (point==nullptr) {
         point = new RedBlackNode<T>(toInsert);
-        cout << "point: " << point->data << endl;
     }
     else if (toInsert < point->data){
-        cout << "2. inserting: " << toInsert << endl;
         insert(toInsert, point->left);
         point->left->parent = point; //update parent pointer
-        rebalance(point->left);
+        if (point->parent != nullptr) {
+            rebalance(point->left);
+        }
     }
     else {
-        cout << "3. inserting: " << toInsert << endl;
         insert(toInsert, point->right);
         point->right->parent = point;
-        rebalance(point->right);
+        if (point->parent != nullptr) {
+            rebalance(point->right);
+        }
     }
 }
 
 template <class T>
 void RedBlackTree<T>::rebalance(RedBlackNode<T>*& inserted) {
-    cout << "rebalancing: " << inserted->data << endl;
-    if (inserted->parent->left != nullptr) { // if inserted's uncle is on the left
-        if (inserted->parent->left->color == "red") { // if inserted's uncle is red, recolor nodes
-            recolor(inserted);
-        } else if (inserted->parent->left->color == "black") { // if inserted's uncle is black, do a rotation
-            doRotation(inserted);
-        }
-    } else if (inserted->parent->parent->right != nullptr) { // inserted's uncle is on the right
-        if (inserted->parent->parent->right->color == "red") { // if inserted's uncle is red, recolor nodes
-            recolor(inserted);
-        } else if (inserted->parent->right->color == "black") { // if inserted's uncle is black, do a rotation
-            doRotation(inserted);
+    if (inserted->parent != nullptr) {
+        if (inserted->parent->parent->left != nullptr) { // if inserted's uncle is on the left
+            if (inserted->parent->parent->left->color == "red") { // if inserted's uncle is red, recolor nodes
+                recolor(inserted);
+            } else if (inserted->parent->parent->left->color == "black") { // if inserted's uncle is black, do a rotation
+                doRotation(inserted);
+            }
+        } else if (inserted->parent->parent->right != nullptr) { // inserted's uncle is on the right
+            if (inserted->parent->parent->right->color == "red") { // if inserted's uncle is red, recolor nodes
+                recolor(inserted);
+            } else if (inserted->parent->parent->right->color == "black") { // if inserted's uncle is black, do a rotation
+                doRotation(inserted);
+            }
         }
     }
 }
 
 template <class T>
 void RedBlackTree<T>::recolor(RedBlackNode<T>*& point) {
-    point->color = "black";
-    point->parent->color = "red";
-    point->parent->left->color = "black";
+        point->color = "black";
+        point->parent->color = "red";
+        point->parent->left->color = "black";
 }
 
 template <class T>
@@ -401,7 +402,7 @@ int RedBlackTree<T>::heightDiff(RedBlackNode<T>* point){
 int main(){
     RedBlackTree<int> b;
     srand(time(NULL));
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < 100; i++){
         int val = rand() % 1000;
         b.insert(val);
     }
